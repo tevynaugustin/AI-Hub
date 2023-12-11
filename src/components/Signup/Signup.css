@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1f1f1f; /* Dark background color */
+  }
+  
+  .sign-up-container {
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #00bfff; /* Vibrant border color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger box shadow for depth */
+    background-color: #333; /* Dark background color inside the container */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #fff; /* White text color for labels */
+  }
+  
+  input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #555; /* Darker border color for input */
+    border-radius: 4px;
+    background-color: #444; /* Slightly lighter background color for input */
+    color: #fff; /* White text color for input */
+  }
+  
+  button {
+    background-color: #00bfff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0080ff; /* Slightly darker on hover */
+  }
+  
+  p {
+    margin-top: 16px;
+    text-align: center;
+    color: #bbb; /* Light gray text color for paragraph */
+  }
+  
+  a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .error-message {
+    color: #ff6666; /* Vibrant red for error messages */
+    margin-top: 16px;
+  }
+  
