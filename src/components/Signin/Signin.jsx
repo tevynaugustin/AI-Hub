@@ -9,11 +9,14 @@ function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [loading, setLoading] = useState(null);
   const navigate = useNavigate()
 
   const handleSignIn = (e) => {
     e.preventDefault();
     console.log({ email, password });
+
+    setLoading(true);
 
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
@@ -33,13 +36,16 @@ function Signin() {
         if (error.code === "auth/too-many-requests") {
           setErrorMessage("Oops! Too many failed attempts :( You can reset your password here or try later.");
         } else {
-          setErrorMessage("An error occurred :/")
+          setErrorMessage("An error occurred :/.. Please try again")
         }
-      });
+      }).finally(() => {
+        setLoading(false);
+      })
   
   };
 
   return (
+    <div className="sign-in-body">
     <div className="sign-in-container">
       <form onSubmit={handleSignIn}>
         <label htmlFor="email">Enter your email</label>
@@ -72,8 +78,10 @@ function Signin() {
         <p>Or <NavLink to={'/Signup'}>Sign up</NavLink></p>
         
         {errorMessage && <p className="error-message">{errorMessage}</p>}
+        {loading && <p className="loading"></p>}
         
       </form>
+    </div>
     </div>
   );
 }

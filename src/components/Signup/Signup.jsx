@@ -9,11 +9,14 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [displayName, setDisplayName] = useState("");
   const [errorMessage, setErrorMessage] = useState(null);
+  const [loading, setLoading] = useState(null);
   const navigate = useNavigate();
 
   const handleSignUp = (e) => {
     e.preventDefault();
     const auth = getAuth();
+
+    setLoading(true);
 
     createUserWithEmailAndPassword(auth, email, password)
       .then(async (userCredential) => {
@@ -32,10 +35,13 @@ function Signup() {
         } else {
           setErrorMessage("An error occurred. Please try again.");
         }
+      }).finally(() => {
+        setLoading(false);
       });
   };
 
   return (
+    <div className="sign-up-body">
     <div className="sign-up-container">
       <form onSubmit={handleSignUp}>
       <label htmlFor="displayName">Enter your display name</label>
@@ -81,7 +87,9 @@ function Signup() {
         </p>
 
         {errorMessage && <p className="error-message">{errorMessage}</p>}
+        {loading && <p className="loading"></p>}
       </form>
+    </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-body {
+.sign-up-body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,18 +16,18 @@ body {
     background-color: #333; /* Dark background color inside the container */
   }
   
-  form {
+  .sign-up-container form {
     display: flex;
     flex-direction: column;
   }
   
-  label {
+  .sign-up-container label {
     margin-bottom: 8px;
     font-weight: bold;
     color: #fff; /* White text color for labels */
   }
   
-  input {
+  .sign-up-container input {
     padding: 8px;
     margin-bottom: 16px;
     border: 1px solid #555; /* Darker border color for input */
@@ -36,7 +36,7 @@ body {
     color: #fff; /* White text color for input */
   }
   
-  button {
+  .sign-up-container button {
     background-color: #00bfff;
     color: #fff;
     padding: 10px;
@@ -45,28 +45,57 @@ body {
     cursor: pointer;
   }
   
-  button:hover {
+  .sign-up-container button:hover {
     background-color: #0080ff; /* Slightly darker on hover */
   }
   
-  p {
+  .sign-up-container p {
     margin-top: 16px;
     text-align: center;
     color: #bbb; /* Light gray text color for paragraph */
   }
   
-  a {
+  .sign-up-container a {
     color: #00bfff;
     text-decoration: none;
     font-weight: bold;
   }
   
-  a:hover {
+  .sign-up-container a:hover {
     text-decoration: underline;
   }
   
-  .error-message {
+  .sign-up-container .error-message {
     color: #ff6666; /* Vibrant red for error messages */
     margin-top: 16px;
   }
+
+  .sign-up-container .loading {
+    color: #008000 ;
+    font-weight: bold;
+  }
+
+/* Add this animation class */
+@keyframes loadingDots {
+    0% {
+      content: 'Loading';
+    }
+    25% {
+      content: 'Loading.';
+    }
+    50% {
+      content: 'Loading..';
+    }
+    75% {
+      content: 'Loading...';
+    }
+  }
+  
+  .sign-up-container .loading::after {
+    content: 'Loading';
+    animation: loadingDots 1s infinite steps(1);
+    display: inline-block;
+  }
+  
+  
   

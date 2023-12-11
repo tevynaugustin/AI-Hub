@@ -1,0 +1,62 @@
+.home-body {
+    position: relative;
+    min-height: 100vh;
+  }
+
+.welcome-msg {
+  text-align: left;
+  margin-left: 10%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  color: #fff;
+}
+
+.introduction {
+  text-align: left;
+  margin-left: 10%;
+  font-size: 1.2rem;
+  color: #bbb;
+  max-width: 775px;
+  position: absolute;
+  top: 65%;
+  transform: translateY(-50%);
+}
+
+.displayName {
+  color: #00bfff;
+}
+
+.navbar {
+  display: flex;
+  background-color: transparent;
+  padding: 15px;
+  margin-right: 75px;
+  float: right;
+  border-bottom: 2px solid white;
+  width: max-content;
+  box-sizing: border-box;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3em;
+  margin-left: 30px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+.nav-link::before {
+  content: "/";
+  position: relative;
+  left: -15px;
+  color: #00bfff;
+}
+.nav-link:hover {
+  color: #0080ff;
+}
+
+.home-container {
+  height: 100%;
+}

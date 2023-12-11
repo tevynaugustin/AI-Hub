@@ -1,0 +1,134 @@
+.sign-in-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1f1f1f; /* Dark background color */
+  }
+  
+  .sign-in-container {
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #00bfff; /* Vibrant border color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger box shadow for depth */
+    background-color: #333; /* Dark background color inside the container */
+    animation: fadeInDown 0.5s ease-in-out; /* Fade in from top animation */
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .sign-in-container form {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.5s ease-in-out; /* Fade in animation */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .sign-in-container label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #fff; /* White text color for labels */
+  }
+  
+  .sign-in-container input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #555; /* Darker border color for input */
+    border-radius: 4px;
+    background-color: #444; /* Slightly lighter background color for input */
+    color: #fff; /* White text color for input */
+  }
+  
+  .sign-in-container button {
+    background-color: #00bfff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+  }
+  
+  .sign-in-container button:hover {
+    background-color: #0080ff; /* Slightly darker on hover */
+  }
+  
+  .sign-in-container p {
+    margin-top: 16px;
+    text-align: center;
+    color: #bbb; /* Light gray text color for paragraph */
+  }
+  
+  .sign-in-container a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .sign-in-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .sign-in-container .error-message {
+    color: #ff6666; /* Vibrant red for error messages */
+    margin-top: 16px;
+    animation: shake 0.5s ease-in-out; /* Shake animation on error */
+  }
+  
+  @keyframes shake {
+    from, to {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(10px);
+    }
+  }
+  
+  .sign-in-container .loading {
+    color: #008000 ;
+    font-weight: bold;
+  }
+
+/* Add this animation class */
+@keyframes loadingDots {
+    0% {
+      content: 'Loading';
+    }
+    25% {
+      content: 'Loading.';
+    }
+    50% {
+      content: 'Loading..';
+    }
+    75% {
+      content: 'Loading...';
+    }
+  }
+  
+  .sign-in-container .loading::after {
+    content: 'Loading';
+    animation: loadingDots 1s infinite steps(1);
+    display: inline-block;
+  }

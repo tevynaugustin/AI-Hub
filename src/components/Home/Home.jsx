@@ -1,30 +1,39 @@
 import React from "react";
-import { getAuth, signOut } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 import { NavLink, useNavigate } from "react-router-dom";
+import "./Home.css";
+import Navbar from "../navbar/navbar";
 
 function Home() {
   const auth = getAuth();
   const user = auth.currentUser;
-  let email = "";
   let displayName = "";
 
   if (user !== null) {
     // The user object has basic properties such as display name, email, etc.
     displayName = user.displayName;
-    console.log(displayName)
-    email = user.email; // Assign value to the email variable
-    const photoURL = user.photoURL;
-    const emailVerified = user.emailVerified;
-    // The user's ID, unique to the Firebase project. Do NOT use
-    // this value to authenticate with your backend server, if
-    // you have one. Use User.getToken() instead.
-    const uid = user.uid;
+    // Additional user properties if needed:
+    // const email = user.email;
+    // const photoURL = user.photoURL;
+    // const emailVerified = user.emailVerified;
+    // const uid = user.uid;
   }
 
   return (
-    <div className="home-container">
-      <h1 className="welcome-msg">Hey {displayName}</h1>
-      <p>Sign out</p>
+    <div>
+      <Navbar />
+      <div className="home-body">
+        <h1 className="welcome-msg">
+          Hey, <span className="displayName">{displayName}</span>
+        </h1>
+        <p className="introduction">
+          Unleash your inner geek with
+          $name$, your daily dose of tech tales! From giants like Google and
+          Apple to David-and-Goliath startups, we've got the scoop on the
+          coolest gadgets, quirkiest apps, and everything in between. Join the
+          nerdy fun at $name$ because tech news doesn't have to be serious!
+        </p>
+      </div>
     </div>
   );
 }
