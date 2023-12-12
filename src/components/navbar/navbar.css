@@ -10,6 +10,7 @@
     border-bottom: 2px solid white;
     width: max-content;
     box-sizing: border-box;
+    z-index: 9999;
 }
 
 .nav-link {
