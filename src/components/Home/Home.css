@@ -13,7 +13,25 @@
   color: #fff;
 }
 
-
+.logOut {
+  border: none;
+  border: 2px solid #00bfff;
+  padding: 5px;
+  background-color: transparent;
+  position: fixed;
+  color: white;
+  font-size: 18px;
+  bottom: 15px;
+  right: 15px;
+  font-weight: bold;
+  transition: .3s ease-in-out;
+}
+.logOut:hover {
+  cursor: pointer;
+  color: #00bfff;
+  background-color: white;
+  border: 2px solid white;
+}
 
 .introduction {
   text-align: left;

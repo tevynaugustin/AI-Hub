@@ -1,5 +1,5 @@
 import React from "react";
-import { getAuth } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Home.css";
 import Navbar from "../navbar/navbar";
@@ -10,6 +10,7 @@ import bgImg from './landing-video.mp4';
 function Home() {
   const auth = getAuth();
   const user = auth.currentUser;
+  const navigate = useNavigate();
   let displayName = "";
 
   if (user !== null) {
@@ -20,6 +21,16 @@ function Home() {
     // const photoURL = user.photoURL;
     // const emailVerified = user.emailVerified;
     // const uid = user.uid;
+  }
+
+  const handleLogOut = () => {
+    signOut(auth)
+    .then(() => {
+      navigate("/Signin");
+    })
+    .catch((error) => {
+      console.error("Error Signing Out:", error)
+    })
   }
 
   return (
@@ -54,6 +65,8 @@ function Home() {
           coolest gadgets, quirkiest apps, and everything in between. Join the
           nerdy fun at DataZ because tech news doesn't have to be serious!
         </p>
+
+        <button className="logOut" onClick={handleLogOut}>Log Out</button>
       </div>
     </div>
   );
