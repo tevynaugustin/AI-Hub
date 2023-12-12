@@ -27,22 +27,23 @@ function Signin() {
       .catch((error) => {
         console.log(error);
 
-        if (error.code === "auth/invalid-credential") {
-          setErrorMessage("Whoops! Credentials are wrong, please try again! :)")
-        } else {
-          setErrorMessage("An error occurred :/")
-        }
-
-        if (error.code === "auth/too-many-requests") {
-          setErrorMessage("Oops! Too many failed attempts :( You can reset your password here or try later.");
-        } else {
-          setErrorMessage("An error occurred :/.. Please try again")
-        }
+        switch(error.code) {
+          case "auth/invalid-credential":
+            setErrorMessage("Whoops! Credentials are wrong, please try again! :)");
+            break;
+          case "auth/too-many-requests":
+            setErrorMessage("Oops! Too many failed attempts :( You can reset your password here or try later.");
+            break;
+          }
       }).finally(() => {
         setLoading(false);
       })
   
   };
+
+  const handleForgotPassword = async () => {
+    navigate('/ForgotPassword');
+  }
 
   return (
     <div className="sign-in-body">
@@ -79,6 +80,7 @@ function Signin() {
 
         <p></p>
         <p>Or <NavLink to={'/Signup'}>Sign up</NavLink></p>
+        <p className="forgotten-password" onClick={handleForgotPassword}>Forgot Password?</p>
         
         {errorMessage && <p className="error-message">{errorMessage}</p>}
         {loading && <p className="loading"></p>}

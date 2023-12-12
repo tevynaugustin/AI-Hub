@@ -4,6 +4,7 @@ import Signin from './components/Signin/Signin';
 import Redirect from './redirect';
 import Signup from './components/Signup/Signup';
 import Home from './components/Home/Home';
+import ForgotPassword from './components/Forgot Password/forgottenpassword';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/Home" element={<Home/>}/>
         <Route exact path='/Signup' element={<Signup/>}/>
         <Route exact path='/Signin' element={<Signin/>}/>
+        <Route exact path="/ForgotPassword" element={<ForgotPassword/>}/>
       </Routes>
     </Router>
   );
