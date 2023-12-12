@@ -41,7 +41,7 @@ function ForgotPassword() {
           required
         />
         <button type="submit">Reset Password</button>
-        <p className="accidentally-clicked" onClick={accidentallyClicked}>Accidentally Clicked? <br/> Click here to go back to the Login page.</p>
+        <p className="accidentally-clicked">Accidentally Clicked? <br/> <span className="acc-clicked-span" onClick={accidentallyClicked}>Click here to go back to the Login page.</span></p>
       </form>
     </div>
   );

@@ -25,6 +25,7 @@
   right: 15px;
   font-weight: bold;
   transition: .3s ease-in-out;
+  z-index: 9999;
 }
 .logOut:hover {
   cursor: pointer;
