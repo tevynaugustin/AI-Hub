@@ -97,7 +97,7 @@ function Signup() {
           <button type="submit">Sign up</button>
 
           <p>
-            Or <NavLink to={"/Signin"}>Sign in</NavLink>
+            Or <NavLink to={"/Signin"}>Log in</NavLink>
           </p>
 
           {errorMessage && <p className="error-message">{errorMessage}</p>}

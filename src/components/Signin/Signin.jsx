@@ -47,6 +47,9 @@ function Signin() {
   return (
     <div className="sign-in-body">
     <div className="sign-in-container">
+      <div className="sign-in-header">
+      <h2 className="sign-in-title">Log in</h2>
+      </div>
       <form onSubmit={handleSignIn}>
         <label htmlFor="email">Enter your email</label>
         <input

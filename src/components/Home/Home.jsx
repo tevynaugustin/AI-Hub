@@ -1,11 +1,13 @@
+// Imports
 import React from "react";
 import { getAuth, signOut } from "firebase/auth";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Home.css";
 import Navbar from "../navbar/navbar";
-import Typewriter from 'typewriter-effect';
-import bgImg from './landing-video.mp4';
-
+import Typewriter from "typewriter-effect";
+import bgImg from "./landing-video.mp4";
+import Featuredfeed from "../Featured News/featuredfeed";
+// ------------------------------------------------------------------------------------------------------------
 
 function Home() {
   const auth = getAuth();
@@ -23,50 +25,83 @@ function Home() {
     // const uid = user.uid;
   }
 
+  // Log Out Function
   const handleLogOut = () => {
     signOut(auth)
-    .then(() => {
-      navigate("/Signin");
-    })
-    .catch((error) => {
-      console.error("Error Signing Out:", error)
-    })
+      .then(() => {
+        navigate("/Signin");
+      })
+      .catch((error) => {
+        console.error("Error Signing Out:", error);
+      });
+  };
+  // --------------------------------------------------------------------------------------------------------------------
+
+  // Function for floating arrow
+  const scrollToFeaturedFeeds = () => {
+    const featuredFeedsTitle = document.getElementById('featured-feeds-title');
+
+    if (featuredFeedsTitle) {
+      featuredFeedsTitle.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'start'
+      });
+    }
   }
+  // --------------------------------------------------------------------------------------------------------------------
 
   return (
     <div>
       <Navbar />
       <div className="home-body">
         <div className="landing-photo">
-          <video autoPlay loop muted style={{
-            objectFit: "cover",
-            height: "425px",
-            width: "100%",
-            opacity: "0.5",
-            borderBottom: "5px solid #0080ff"
-          }}>
-            <source src={bgImg} type="video/mp4"/>
+          <video
+            autoPlay
+            loop
+            muted
+            style={{
+              objectFit: "cover",
+              height: "425px",
+              width: "100%",
+              opacity: "0.5",
+              borderBottom: "5px solid #0080ff",
+            }}
+          >
+            <source src={bgImg} type="video/mp4" />
             Your Browser does not support the video tag
           </video>
         </div>
-      <h1 className="welcome-msg">
-      <Typewriter onInit={(typewriter) => {
-  typewriter.typeString(`Hey, `)
-    .start()
-    .typeString(`<span class="displayName">${displayName}</span>!`)
-    .start();
-}} />
-
+        <h1 className="welcome-msg">
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString(`Hey, `)
+                .start()
+                .typeString(`<span class="displayName">${displayName}</span>!`)
+                .start();
+            }}
+          />
         </h1>
         <p className="introduction">
-          Unleash your inner geek with
-          DataZ, your daily dose of tech tales! From giants like Google and
-          Apple to David-and-Goliath startups, we've got the scoop on the
-          coolest gadgets, quirkiest apps, and everything in between. Join the
-          nerdy fun at DataZ because tech news doesn't have to be serious!
+          Unleash your inner geek with DataZ, your daily dose of tech tales!
+          From giants like Google and Apple to David-and-Goliath startups, we've
+          got the scoop on the coolest gadgets, quirkiest apps, and everything
+          in between. Join the nerdy fun at DataZ because tech news doesn't have
+          to be serious!
         </p>
 
-        <button className="logOut" onClick={handleLogOut}>Log Out</button>
+        <button className="logOut" onClick={handleLogOut}>
+          Log Out
+        </button>
+
+        {/* Floating Arrow */}
+        <div className="floating-arrow" onClick={scrollToFeaturedFeeds}></div>
+
+        <div className="featured-feeds">
+          <h1 id="featured-feeds-title" className="featured-feeds-title">Featured Feeds</h1>
+          <Featuredfeed/>
+        </div>
       </div>
     </div>
   );

@@ -80,3 +80,34 @@
 .home-container {
   height: 100%;
 }
+
+.floating-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #00bfff;
+  clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+  animation: floatUpDown 2s infinite ease-in-out;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.featured-feeds {
+  position: relative;
+  top: 700px;
+  margin-left: 10%;
+}
+.featured-feeds .featured-feeds-title {
+  font-size: 4rem;
+  color: #fff;
+}
