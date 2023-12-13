@@ -3,6 +3,7 @@ import "./Signin.css";
 import '../../firebase'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import {NavLink, useNavigate } from "react-router-dom";
+import logo from '../../main images/logo.png'
 
 function Signin() {
 
@@ -47,6 +48,7 @@ function Signin() {
 
   return (
     <div className="sign-in-body">
+      <img className="logo" src={logo} alt="" />
     <div className="sign-in-container">
       <div className="sign-in-header">
       <h2 className="sign-in-title">Log in</h2>

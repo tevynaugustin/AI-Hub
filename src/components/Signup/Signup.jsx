@@ -3,6 +3,7 @@ import "./Signup.css";
 import "../../firebase";
 import { NavLink, useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import logo from '../../main images/logo.png'
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -53,6 +54,7 @@ function Signup() {
 
   return (
     <div className="sign-up-body">
+      <img className="logo" src={logo} alt="" />
       <div className="sign-up-container">
         <div className="sign-up-header">
           <h2 className="sign-up-title">Sign Up</h2>

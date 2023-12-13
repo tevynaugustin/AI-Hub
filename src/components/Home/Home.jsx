@@ -5,7 +5,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./Home.css";
 import Navbar from "../navbar/navbar";
 import Typewriter from "typewriter-effect";
-import bgImg from "./landing-video.mp4";
+import bgImg from "./landing-pic.png";
+import logo from '../../main images/logo.png'
 import Featuredfeed from "../Featured News/featuredfeed";
 // ------------------------------------------------------------------------------------------------------------
 
@@ -56,21 +57,8 @@ function Home() {
       <Navbar />
       <div className="home-body">
         <div className="landing-photo">
-          <video
-            autoPlay
-            loop
-            muted
-            style={{
-              objectFit: "cover",
-              height: "425px",
-              width: "100%",
-              opacity: "0.5",
-              borderBottom: "5px solid #0080ff",
-            }}
-          >
-            <source src={bgImg} type="video/mp4" />
-            Your Browser does not support the video tag
-          </video>
+          <img src={bgImg} alt="" />
+          <img className="logo-home" src={logo} alt="" />
         </div>
         <h1 className="welcome-msg">
           <Typewriter
@@ -84,10 +72,10 @@ function Home() {
           />
         </h1>
         <p className="introduction">
-          Unleash your inner geek with DataZ, your daily dose of tech tales!
+          Unleash your inner geek with OPTIC, your daily dose of tech tales!
           From giants like Google and Apple to David-and-Goliath startups, we've
           got the scoop on the coolest gadgets, quirkiest apps, and everything
-          in between. Join the nerdy fun at DataZ because tech news doesn't have
+          in between. Join the nerdy fun at OPTIC because tech news doesn't have
           to be serious!
         </p>
 

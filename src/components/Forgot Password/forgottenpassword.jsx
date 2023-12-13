@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import './forgottenpassword.css'
+import logo from '../../main images/logo.png'
 
 function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -26,6 +27,8 @@ function ForgotPassword() {
   
 
   return (
+    <>
+    <img className="logo" src={logo} alt="" />
     <div className="forgot-password-container">
       <h2 className="forgot-password-title">Forgot Password</h2>
       <p>
@@ -44,6 +47,7 @@ function ForgotPassword() {
         <p className="accidentally-clicked">Accidentally Clicked? <br/> <span className="acc-clicked-span" onClick={accidentallyClicked}>Click here to go back to the Login page.</span></p>
       </form>
     </div>
+    </>
   );
 }
 

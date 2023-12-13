@@ -11,6 +11,7 @@ import {
   verifyBeforeUpdateEmail,
   deleteUser
 } from "firebase/auth";
+import logo from '../../main images/logo.png'
 
 function Myaccount() {
   const [newEmail, setNewEmail] = useState("");
@@ -163,8 +164,8 @@ function Myaccount() {
     }
   };
 
-  const backToLogin = () => {
-    navigate("/Signin");
+  const backToHome = () => {
+    navigate("/Home");
   };
 
   const userDeletion = () => {
@@ -179,6 +180,8 @@ function Myaccount() {
   }
 
   return (
+    <>
+    <img className="logo" src={logo} alt="" />
     <div className="my-account-container">
       <h2>Update Account Details</h2>
       {error && <div className="error-message">{error}</div>}
@@ -222,11 +225,12 @@ function Myaccount() {
         <button type="submit">Update Password</button>
       </form>
 
-      <button className="back-button" onClick={backToLogin}>
-        Back to Login Page
+      <button className="back-button" onClick={backToHome}>
+        Back to Home Page
       </button>
       <button className="delete-user" onClick={userDeletion}>Delete User</button>
     </div>
+    </>
   );
 }
 
