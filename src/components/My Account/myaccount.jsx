@@ -8,7 +8,8 @@ import {
   getAuth,
   EmailAuthProvider,
   reauthenticateWithCredential,
-  verifyBeforeUpdateEmail
+  verifyBeforeUpdateEmail,
+  deleteUser
 } from "firebase/auth";
 
 function Myaccount() {
@@ -166,6 +167,17 @@ function Myaccount() {
     navigate("/Signin");
   };
 
+  const userDeletion = () => {
+    deleteUser(user).then(() => {
+        setSuccess("User Deleted!");
+        setTimeout(() => {
+            navigate("/Signup")
+        }, 1500)
+    }).catch((error) => {
+        setError("User Deletion Error:", error)
+    })
+  }
+
   return (
     <div className="my-account-container">
       <h2>Update Account Details</h2>
@@ -213,6 +225,7 @@ function Myaccount() {
       <button className="back-button" onClick={backToLogin}>
         Back to Login Page
       </button>
+      <button className="delete-user" onClick={userDeletion}>Delete User</button>
     </div>
   );
 }

@@ -61,6 +61,10 @@
   .my-account-container .back-button {
     margin-top: 25px;
   }
+  .my-account-container .delete-user {
+    margin-top: 25px;
+    float: right;
+  }
   
   /* Hover styles for the my account form button */
   .my-account-container button:hover {
