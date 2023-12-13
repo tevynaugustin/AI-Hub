@@ -1,0 +1,161 @@
+/* myaccount.css */
+
+/* Style for the my account container */
+.my-account-container {
+    width: 400px;
+    padding: 40px;
+    border: 2px solid #ff7f50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+  }
+  
+  /* Title for the my account section */
+  .my-account-container h2 {
+    color: #ff7f50;
+    margin-bottom: 15px;
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  /* Form inside the my account container */
+  .my-account-container form {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Label styles for the my account form */
+  .my-account-container label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Input styles for the my account form */
+  .my-account-container input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+  }
+  
+  /* Button styles for the my account form */
+  .my-account-container button {
+    background-color: #ff7f50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .my-account-container .back-button {
+    margin-top: 25px;
+  }
+  
+  /* Hover styles for the my account form button */
+  .my-account-container button:hover {
+    background-color: #ff6347;
+  }
+  
+  /* Paragraph styles for messages in the my account form */
+  .my-account-container p {
+    margin-top: 16px;
+    text-align: center;
+    color: #bbb;
+  }
+  
+  /* Anchor (link) styles for the my account form */
+  .my-account-container a {
+    color: #ff7f50;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .my-account-container form label {
+        margin-top: 15px;
+  }
+  
+  /* Hover styles for the my account form link */
+  .my-account-container a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Error message styles for the my account form */
+  .my-account-container .error-message {
+    color: #ff6666;
+    margin-top: 16px;
+    animation: shake 0.5s ease-in-out;
+  }
+
+  .success-message {
+    color: #4caf50; /* Green text color for success messages */
+    font-size: 18px;
+    margin-top: 16px;
+    text-align: center;
+    animation: fadeInUp 0.5s ease-in-out; /* Fade in and slide up animation */
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Shake animation keyframes for error messages */
+  @keyframes shake {
+    from, to {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(10px);
+    }
+  }
+  
+  /* Loading animation styles for the my account form */
+  .my-account-container .loading {
+    color: #008000;
+    font-weight: bold;
+  }
+  
+  /* Loading dots animation keyframes for the my account form */
+  @keyframes loadingDots {
+    0% {
+      content: 'Loading';
+    }
+    25% {
+      content: 'Loading.';
+    }
+    50% {
+      content: 'Loading..';
+    }
+    75% {
+      content: 'Loading...';
+    }
+  }
+  
+  /* Loading dots styles for the my account form */
+  .my-account-container .loading::after {
+    content: 'Loading';
+    animation: loadingDots 1s infinite steps(1);
+    display: inline-block;
+  }
+  

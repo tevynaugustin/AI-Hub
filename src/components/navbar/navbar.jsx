@@ -1,26 +1,47 @@
-import React from "react";
+// Navbar.js
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import './navbar.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import './navbar.css';
 
 function Navbar() {
-  return <div>
-    <nav className="navbar">
-  <div className="navbar-container">
-    <NavLink to="/tech" className="nav-link">
-      Tech
-    </NavLink>
-    <NavLink to="/reviews" className="nav-link">
-      Reviews
-    </NavLink>
-    <NavLink to="/science" className="nav-link">
-      Science
-    </NavLink>
-    <NavLink to="/entertainment" className="nav-link">
-      Entertainment
-    </NavLink>
-  </div>
-</nav>
-  </div>;
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
+
+  return (
+    <div>
+      <nav className="navbar">
+        <div className="navbar-container">
+          <div className="menu-icon" onClick={toggleDropdown}>
+            <FontAwesomeIcon icon={faBars} />
+          </div>
+          <NavLink to="/tech" className="nav-link">
+            Tech
+          </NavLink>
+          <NavLink to="/reviews" className="nav-link">
+            Reviews
+          </NavLink>
+          <NavLink to="/science" className="nav-link">
+            Science
+          </NavLink>
+          <NavLink to="/entertainment" className="nav-link">
+            Entertainment
+          </NavLink>
+          <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
+            <div className="dropdown-content">
+              <NavLink to="/myaccount" className="nav-link">
+                My Account
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
 }
 
 export default Navbar;

@@ -5,17 +5,22 @@ import Redirect from './redirect';
 import Signup from './components/Signup/Signup';
 import Home from './components/Home/Home';
 import ForgotPassword from './components/Forgot Password/forgottenpassword';
+import Myaccount from './components/My Account/myaccount';
+import { AuthProvider } from './AuthContext';
 
 function App() {
   return (
     <Router>
+      <AuthProvider>
       <Routes>
       <Route exact path="/" element={<Redirect/>}/>
         <Route exact path="/Home" element={<Home/>}/>
         <Route exact path='/Signup' element={<Signup/>}/>
         <Route exact path='/Signin' element={<Signin/>}/>
         <Route exact path="/ForgotPassword" element={<ForgotPassword/>}/>
+        <Route exact path="/myaccount" element={<Myaccount/>}/>
       </Routes>
+      </AuthProvider>
     </Router>
   );
 }
