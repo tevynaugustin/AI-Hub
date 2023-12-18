@@ -135,7 +135,17 @@
   color: #fff;
 }
 
-/* Media queries for smaller screens */
+/* Small Devices, 600px and below */
+@media only screen and (max-width: 600px) {
+    
+}
+  
+/* Small Devices, 600px and up */
+@media only screen and (min-width: 600px) {
+  
+}
+
+    /* Media queries for smaller screens */
 @media only screen and (max-width: 768px) {
   .welcome-msg {
     position: relative;
@@ -190,4 +200,44 @@
     position: relative;
     top: 15vh;
   }
+}
+  
+/* Large Devices, 992px and up */
+@media only screen and (min-width: 992px) {
+  .home-body .landing-photo .logo-home {
+    width: 15%;
+    margin-top: .2vh; 
+    left: 12%;
+    transform: translateX(-12%);
+  }
+
+  .navbar .navbar-container .menu-icon {
+    right: 85%;
+    transform: translateX(-85%);
+  }
+
+  .home-body .welcome-msg {
+    position: absolute;
+    left: 34%;
+    top: 37%;
+    transform: translate(-37%, -34%);
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+  }
+  .home-body .introduction {
+    text-align: center;
+    font-size: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .floating-arrow {
+    display: none;
+  }
+}
+  
+/* Large Devices, 1200px and up */
+@media only screen and (min-width: 1200px) {
+  
 }

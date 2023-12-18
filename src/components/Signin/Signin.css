@@ -145,3 +145,93 @@
     animation: loadingDots 1s infinite steps(1);
     display: inline-block;
   }
+
+    /* Small Devices, 600px and below */
+    @media only screen and (max-width: 600px) {
+      .sign-in-body .logo {
+        width: 75%;
+        position: absolute;
+        right: 0;
+        left: 50%;
+        top: 5vh;
+        transform: translateX(-50%);
+      }
+
+      .sign-in-body .sign-in-container {
+        width: 32vh;
+      }
+    }
+  
+    /* Small Devices, 600px and up */
+    @media only screen and (min-width: 600px) {
+  
+    }
+  
+    /* Medium Devices, 768px and up */
+    @media screen and (min-width: 768px) {
+      .sign-in-body .logo {
+        position: absolute;
+        left: 50%;
+        top: 5vh;
+        transform: translateX(-50%);
+      }
+
+      .sign-in-body .sign-in-container {
+        width: 50%;
+      }
+
+      .sign-in-body .sign-in-container p,
+      .sign-in-body .sign-in-container button,
+      .sign-in-body .sign-in-container label {
+        font-size: 1.8vh;
+      }
+
+      .sign-in-body .sign-in-container input {
+        height: 2vh;
+      }
+    }
+    /* ---------------------------------------------------------------------------------------------- */
+  
+    /* Large Devices, 992px and up */
+    @media only screen and (min-width: 992px) {
+      .sign-in-body .logo {
+        position: absolute;
+        left: 50%;
+        top: 5vh;
+        width: 55vh;
+        transform: translateX(-50%);
+      }
+
+      .sign-in-body .sign-in-container .sign-in-title {
+        font-size: 3vh;
+      }
+      .sign-in-body .sign-in-container {
+        width: 60%;
+      }
+
+      .sign-in-body .sign-in-container p,
+      .sign-in-body .sign-in-container button,
+      .sign-in-body .sign-in-container label {
+        font-size: 2.2vh;
+      }
+
+      .sign-in-body .sign-in-container input {
+        height: 2vh;
+      }
+      .sign-in-body .sign-in-container input::placeholder {
+        font-size: 1.5vh;
+      }
+    }
+  
+    /* Large Devices, 1200px and up */
+    @media only screen and (min-width: 1200px) {
+      .sign-in-body .logo {
+        position: absolute;
+        left: 50%;
+        top: 5vh;
+        transform: translateX(-50%);
+      }
+      .sign-in-body .sign-in-container {
+        width: 35%;
+      }
+    }
