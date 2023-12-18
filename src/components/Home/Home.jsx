@@ -1,7 +1,7 @@
 // Imports
 import React from "react";
 import { getAuth, signOut } from "firebase/auth";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import Navbar from "../navbar/navbar";
 import Typewriter from "typewriter-effect";

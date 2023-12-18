@@ -163,3 +163,12 @@
     display: inline-block;
   }
   
+  @media screen and (min-width: 768px) {
+    .my-account-container {
+      width: 400px; /* Adjust the width for larger screens */
+    }
+
+    .my-account-logo {
+      width: 50%;
+    }
+  }

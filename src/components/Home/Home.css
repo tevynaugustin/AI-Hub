@@ -1,7 +1,8 @@
+/* Default styles for larger screens */
 .home-body {
-    position: relative;
-    min-height: 100vh;
-  }
+  position: relative;
+  min-height: 100vh;
+}
 
 .welcome-msg {
   text-align: left;
@@ -132,4 +133,61 @@
 .featured-feeds .featured-feeds-title {
   font-size: 4rem;
   color: #fff;
+}
+
+/* Media queries for smaller screens */
+@media only screen and (max-width: 768px) {
+  .welcome-msg {
+    position: relative;
+    margin-top: 10%;
+    font-size: 3rem;
+    margin-left: 5%;
+    text-align: center;
+  }
+
+  .introduction {
+    font-size: 1rem;
+    margin-right: 7%;
+    position: relative;
+    top: 60%;
+    text-align: center;
+  }
+
+  .home-body .landing-photo {
+    height: 300px;
+  }
+
+  .home-body .landing-photo .logo-home {
+    width: 15%;
+    top: 1.1vh;
+    left: 7vh;
+  }
+
+  .navbar {
+    margin-right: 0;
+  }
+
+  .navbar-container {
+    position: relative;
+    left: 10vh;
+  }
+
+  .nav-link {
+    font-size: 1em;
+    margin-left: 15px;
+  }
+
+  .featured-feeds {
+    margin-left: 5%;
+    top: 20vh;
+  }
+
+  .featured-feeds .featured-feeds-title {
+    font-size: 3rem;
+  }
+
+  .floating-arrow {
+    position: relative;
+    top: 15vh;
+  }
 }

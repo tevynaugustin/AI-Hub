@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useAuth } from "../../AuthContext";
 import { useNavigate } from "react-router-dom";
 import "./myaccount.css"; // Import the CSS file for styling
 import {
@@ -17,7 +16,7 @@ function Myaccount() {
   const [newEmail, setNewEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [newDisplayName, setNewDisplayName] = useState("");
-  const [currentPassword, setCurrentPassword] = useState("");
+  const [currentPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState("");
@@ -25,18 +24,7 @@ function Myaccount() {
 
   const auth = getAuth();
   const user = auth.currentUser;
-  let displayName = "";
-  let email = "";
 
-  if (user !== null) {
-    // The user object has basic properties such as display name, email, etc.
-    displayName = user.displayName;
-    // Additional user properties if needed:
-    email = user.email;
-    // const photoURL = user.photoURL;
-    // const emailVerified = user.emailVerified;
-    // const uid = user.uid;
-  }
 
   // Reauthenticate function
   const reauthenticate = async () => {
@@ -181,14 +169,14 @@ function Myaccount() {
 
   return (
     <>
-    <img className="logo" src={logo} alt="" />
+    <img className="my-account-logo" src={logo} alt="" />
     <div className="my-account-container">
       <h2>Update Account Details</h2>
       {error && <div className="error-message">{error}</div>}
       {success && <div className="success-message">{success}</div>}
 
       <form className="update-form" onSubmit={handleUpdateDisplayName}>
-        <label>Display Name:</label>
+        <label>Display Name:</label>a
         <input
           type="text"
           value={newDisplayName}

@@ -50,6 +50,14 @@
     .nav-link {
         margin: 0 15px;
     }
+
+    .menu-icon {
+        right: 20vh !important;
+    }
+
+    .dropdown {
+        left: -22vh !important;
+    }
 }
 
 /* navbar.css */
