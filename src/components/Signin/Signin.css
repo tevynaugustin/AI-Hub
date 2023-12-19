@@ -232,6 +232,12 @@
         transform: translateX(-50%);
       }
       .sign-in-body .sign-in-container {
-        width: 35%;
+        width: 300px;
+      }
+
+      .sign-in-body .sign-in-container p,
+      .sign-in-body .sign-in-container button,
+      .sign-in-body .sign-in-container label {
+        font-size: 1.5vh;
       }
     }

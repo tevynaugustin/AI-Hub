@@ -6,6 +6,7 @@ import Signup from './components/Signup/Signup';
 import Home from './components/Home/Home';
 import ForgotPassword from './components/Forgot Password/forgottenpassword';
 import Myaccount from './components/My Account/myaccount';
+import ImageGenerator from './components/ImageGenerator/ImageGenerator';
 import { AuthProvider } from './AuthContext';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/Signin' element={<Signin/>}/>
         <Route exact path="/ForgotPassword" element={<ForgotPassword/>}/>
         <Route exact path="/myaccount" element={<Myaccount/>}/>
+        <Route exact path="/imagegenerator" element={<ImageGenerator/>}/>
       </Routes>
       </AuthProvider>
     </Router>

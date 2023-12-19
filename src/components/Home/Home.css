@@ -239,5 +239,26 @@
   
 /* Large Devices, 1200px and up */
 @media only screen and (min-width: 1200px) {
-  
+  .home-body .landing-photo .logo-home {
+    width: 10%;
+    margin-top: 0;
+    left: 8%;
+  }
+
+  .navbar .navbar-container .menu-icon  {
+    right: 64vh;
+    transform: translateX(-64vh);
+  }
+
+  .home-body .introduction {
+    top: 75%;
+    text-align: left;
+  }
+
+  .home-body .welcome-msg {
+    text-align: left;
+    left: 9.6%;
+    top: 51%;
+    transform: translate(-51%, -30%);
+  }
 }

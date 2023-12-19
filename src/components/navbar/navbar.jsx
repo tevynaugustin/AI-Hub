@@ -19,8 +19,8 @@ function Navbar() {
           <div className="menu-icon" onClick={toggleDropdown}>
             <FontAwesomeIcon icon={faBars} />
           </div>
-          <NavLink to="/tech" className="nav-link">
-            Tech
+          <NavLink to="/imagegenerator" className="nav-link">
+            Image Generator
           </NavLink>
           <NavLink to="/reviews" className="nav-link">
             Reviews

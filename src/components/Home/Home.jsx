@@ -6,8 +6,7 @@ import "./Home.css";
 import Navbar from "../navbar/navbar";
 import Typewriter from "typewriter-effect";
 import bgImg from "./landing-pic.png";
-import logo from '../../main images/logo.png'
-import Featuredfeed from "../Featured News/featuredfeed";
+import logo from "../../main images/logo.png";
 // ------------------------------------------------------------------------------------------------------------
 
 function Home() {
@@ -40,16 +39,16 @@ function Home() {
 
   // Function for floating arrow
   const scrollToFeaturedFeeds = () => {
-    const featuredFeedsTitle = document.getElementById('featured-feeds-title');
+    const featuredFeedsTitle = document.getElementById("featured-feeds-title");
 
     if (featuredFeedsTitle) {
       featuredFeedsTitle.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-        inline: 'start'
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
       });
     }
-  }
+  };
   // --------------------------------------------------------------------------------------------------------------------
 
   return (
@@ -72,11 +71,12 @@ function Home() {
           />
         </h1>
         <p className="introduction">
-          Unleash your inner geek with OPTIC, your daily dose of tech tales!
-          From giants like Google and Apple to David-and-Goliath startups, we've
-          got the scoop on the coolest gadgets, quirkiest apps, and everything
-          in between. Join the nerdy fun at OPTIC because tech news doesn't have
-          to be serious!
+          Step into the vibrant world of OPTIC, where the magic of AI comes to
+          life! Explore the realm of limitless possibilities as you generate
+          stunning AI images, engage in captivating conversations with our AI
+          companions, and embark on a thrilling journey of discovery. OPTIC is
+          not just a platform—it's an adventure waiting to unfold. Dive in and
+          let the excitement begin!
         </p>
 
         <button className="logOut" onClick={handleLogOut}>
@@ -85,11 +85,6 @@ function Home() {
 
         {/* Floating Arrow */}
         <div className="floating-arrow" onClick={scrollToFeaturedFeeds}></div>
-
-        <div className="featured-feeds">
-          <h1 id="featured-feeds-title" className="featured-feeds-title">Featured Feeds</h1>
-          <Featuredfeed/>
-        </div>
       </div>
     </div>
   );
