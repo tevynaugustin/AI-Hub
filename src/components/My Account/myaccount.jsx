@@ -176,7 +176,7 @@ function Myaccount() {
       {success && <div className="success-message">{success}</div>}
 
       <form className="update-form" onSubmit={handleUpdateDisplayName}>
-        <label>Display Name:</label>a
+        <label>Display Name:</label>
         <input
           type="text"
           value={newDisplayName}

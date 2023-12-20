@@ -163,34 +163,123 @@
     display: inline-block;
   }
 
+  /* Small Device, 400px and below */
+
+  @media only screen and (max-width: 380px) {
+    .my-account-container {
+      height: 65vh;
+      width: 32vh !important;
+    }
+
+    .my-account-container h2 {
+      margin-bottom: 0;
+      margin-top: -3vh;
+    }
+    .my-account-container button {
+      font-size: 10px;
+    }
+    .my-account-container form label {
+      font-size: 10px;
+    }
+    .my-account-container form input {
+      font-size: 12px;
+    }
+    .my-account-container .delete-user {
+      margin-top: 1.5vh;
+    }
+  }
+
   /* Small Devices, 600px and below */
   @media only screen and (max-width: 600px) {
-    
+    .my-account-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 45vh;
+    }
+
+    .my-account-container {
+      width: 20vh;
+      margin-top: 2vh;
+    }
+
+    .my-account-container .delete-user {
+      float: left;
+      background-color: red;
+    }
+
+    .my-account-container h2 {
+      font-size: 14px;
+    }
+    .my-account-container form label {
+      font-size: 14px;
+    }
+    .my-account-container .back-button,
+    .my-account-container .delete-user {
+      width: 20vh;
+    }
+    .my-account-container .back-button {
+      background-color: #00bfff !important;
+    }
   }
 
   /* Small Devices, 600px and up */
   @media only screen and (min-width: 600px) {
+    .my-account-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 55vh;
+    }
 
+    .my-account-container {
+      margin-top: 5vh;
+      width: 45vh;
+    }
   }
 
   /* Medium Devices, 768px and up */
   @media screen and (min-width: 768px) {
     .my-account-container {
-      width: 400px;
+      width: 45vh;
+      margin-top: 5vh;
     }
 
     .my-account-logo {
-      width: 50%;
+      width: 65vh;
+      position: absolute;
+      left: 0%;
+      transform: translateX(0%);
     }
   }
   /* ---------------------------------------------------------------------------------------------- */
 
   /* Large Devices, 992px and up */
   @media only screen and (min-width: 992px) {
+    .my-account-container {
+      width: 45vh;
+      margin-top: 5vh;
+    }
 
+    .my-account-logo {
+      width: 65vh;
+      position: absolute;
+      transform: translateX(0%);
+      left: 0%;
+    }
   }
 
   /* Large Devices, 1200px and up */
   @media only screen and (min-width: 1200px) {
+    .my-account-logo {
+      width: 65vh;
+      position: absolute;
+      left: 0%;
+      transform: translateX(0%);
+    }
 
+    .my-account-container {
+      width: 45vh;
+      margin-top: 5vh;
+    }
   }
