@@ -1,12 +1,14 @@
 // Imports
-import React from "react";
+import React , {useState} from "react";
 import { getAuth, signOut } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import "./Home.css";
 import Navbar from "../navbar/navbar";
 import Typewriter from "typewriter-effect";
 import bgImg from "./landing-pic.png";
 import logo from "../../main images/logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 // ------------------------------------------------------------------------------------------------------------
 
 function Home() {
@@ -49,6 +51,12 @@ function Home() {
       });
     }
   };
+
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
   // --------------------------------------------------------------------------------------------------------------------
 
   return (
@@ -57,6 +65,16 @@ function Home() {
       <div className="home-body">
         <div className="landing-photo">
           <img src={bgImg} alt="" />
+          <div className="menu-icon" onClick={toggleDropdown}>
+          <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
+            <div className="dropdown-content">
+              <NavLink to="/myaccount" className="nav-link">
+                My Account
+              </NavLink>
+            </div>
+          </div>
+            <FontAwesomeIcon icon={faBars} />
+          </div>
           <img className="logo-home" src={logo} alt="" />
         </div>
         <h1 className="welcome-msg">

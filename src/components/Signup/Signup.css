@@ -111,7 +111,18 @@
   
     /* Small Devices, 600px and below */
     @media only screen and (max-width: 600px) {
-    
+      .sign-up-body .logo {
+        width: 75%;
+        position: absolute;
+        right: 0;
+        left: 50%;
+        top: 5vh;
+        transform: translateX(-50%);
+      }
+
+      .sign-up-body .sign-up-container {
+        width: 40vh;
+      }
     }
   
     /* Small Devices, 600px and up */
@@ -121,16 +132,75 @@
   
     /* Medium Devices, 768px and up */
     @media screen and (min-width: 768px) {
-      
+      .sign-up-body .logo {
+        position: absolute;
+        left: 50%;
+        top: 5vh;
+        transform: translateX(-50%);
+      }
+
+      .sign-up-body .sign-up-container {
+        width: 50%;
+      }
+
+      .sign-up-body .sign-up-container p,
+      .sign-up-body .sign-up-container button,
+      .sign-up-body .sign-up-container label {
+        font-size: 1.8vh;
+      }
+
+      .sign-up-body .sign-up-container input {
+        height: 2vh;
+      }
     }
     /* ---------------------------------------------------------------------------------------------- */
   
     /* Large Devices, 992px and up */
     @media only screen and (min-width: 992px) {
-  
+      .sign-up-body .logo {
+        position: absolute;
+        left: 50%;
+        top: 5vh;
+        width: 55vh;
+        transform: translateX(-50%);
+      }
+
+      .sign-up-body .sign-up-container .sign-in-title {
+        font-size: 3vh;
+      }
+      .sign-up-body .sign-up-container {
+        width: 60%;
+      }
+
+      .sign-up-body .sign-up-container p,
+      .sign-up-body .sign-up-container button,
+      .sign-up-body .sign-up-container label {
+        font-size: 2.2vh;
+      }
+
+      .sign-up-body .sign-up-container input {
+        height: 2vh;
+      }
+      .sign-up-body .sign-up-container input::placeholder {
+        font-size: 1.5vh;
+      }
     }
   
     /* Large Devices, 1200px and up */
     @media only screen and (min-width: 1200px) {
-  
+      .sign-up-body .logo {
+        position: absolute;
+        left: 50%;
+        top: 5vh;
+        transform: translateX(-50%);
+      }
+      .sign-up-body .sign-up-container {
+        width: 300px;
+      }
+
+      .sign-up-body .sign-up-container p,
+      .sign-up-body .sign-up-container button,
+      .sign-up-body .sign-up-container label {
+        font-size: 1.5vh;
+      }
     }

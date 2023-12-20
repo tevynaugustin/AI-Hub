@@ -1,22 +1,16 @@
 // Navbar.js
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import './navbar.css';
 
 function Navbar() {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!isDropdownOpen);
-  };
-
   return (
     <div>
       <nav className="navbar">
         <div className="navbar-container">
-          <div className="menu-icon" onClick={toggleDropdown}>
+          <div className="menu-icon">
             <FontAwesomeIcon icon={faBars} />
           </div>
           <NavLink to="/imagegenerator" className="nav-link">
@@ -31,13 +25,6 @@ function Navbar() {
           <NavLink to="/entertainment" className="nav-link">
             Entertainment
           </NavLink>
-          <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
-            <div className="dropdown-content">
-              <NavLink to="/myaccount" className="nav-link">
-                My Account
-              </NavLink>
-            </div>
-          </div>
         </div>
       </nav>
     </div>

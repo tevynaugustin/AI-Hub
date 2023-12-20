@@ -82,6 +82,14 @@
   box-sizing: border-box;
 }
 
+.menu-icon {
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.5em;
+  margin-right: 20px;
+  z-index: 9999;
+}
+
 .nav-link {
   text-decoration: none;
   color: #fff;
@@ -102,6 +110,35 @@
 
 .home-container {
   height: 100%;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  width: max-content;
+}
+
+.dropdown.open {
+  display: block;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.dropdown-content {
+  background-color: #222;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content .nav-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 10px;
+  margin-left: 1vh;
 }
 
 .floating-arrow {
@@ -240,25 +277,26 @@
 /* Large Devices, 1200px and up */
 @media only screen and (min-width: 1200px) {
   .home-body .landing-photo .logo-home {
-    width: 10%;
+    width: 20vh;
     margin-top: 0;
-    left: 8%;
+    left: 15vh;
   }
 
-  .navbar .navbar-container .menu-icon  {
-    right: 64vh;
-    transform: translateX(-64vh);
+  .home-body .menu-icon  {
+    position: absolute;
+    top: 1.7vh;
+    left: 6vh;
   }
 
   .home-body .introduction {
-    top: 75%;
+    top: 75vh;
     text-align: left;
   }
 
   .home-body .welcome-msg {
     text-align: left;
-    left: 9.6%;
-    top: 51%;
+    left: 21vh;
+    top: 52vh;
     transform: translate(-51%, -30%);
   }
 }

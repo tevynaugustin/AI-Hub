@@ -158,13 +158,20 @@
       }
 
       .sign-in-body .sign-in-container {
-        width: 32vh;
+        width: 40vh;
       }
     }
   
     /* Small Devices, 600px and up */
     @media only screen and (min-width: 600px) {
-  
+      .sign-in-body .logo {
+        width: 75%;
+        position: absolute;
+        right: 0;
+        left: 50%;
+        top: 5vh;
+        transform: translateX(-50%);
+      }
     }
   
     /* Medium Devices, 768px and up */
