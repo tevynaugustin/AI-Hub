@@ -10,8 +10,17 @@
     z-index: 999;
 }
 
-.navbar .navbar-container .menu-icon {
-    visibility: hidden;
+.navbar .menu-icon {
+    position: absolute;
+    left: 5vh;
+    bottom: 1.2vh;
+}
+
+.navbar .logo-home {
+    width: 15vh;
+    position: absolute;
+    left: 10vh;
+    bottom: 1.2vh;
 }
 
 .navbar-container {
@@ -72,5 +81,22 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* For Smaller Phones */
+@media only screen and (max-width: 375px) {
+    #root .navbar .navbar-container .nav-link {
+        font-size: 2vh;
+    }
+    #root .navbar .navbar-container .nav-link::before{
+        display: none;
+    }
+}
+
+/* for Phones */
+@media only screen and (max-width: 430px) {
+    #root .navbar .navbar-container {
+        display: none;
     }
 }

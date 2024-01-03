@@ -172,17 +172,24 @@
   color: #fff;
 }
 
-/* Small Devices, 600px and below */
-@media only screen and (max-width: 600px) {
-    
-}
-  
-/* Small Devices, 600px and up */
-@media only screen and (min-width: 600px) {
-  
+/* For Small Phones */
+@media only screen and (max-width: 430px) {
+  #root .home-body .welcome-msg {
+    font-size: 7vh;
+    margin-bottom: 0;
+    margin-top: 12%;
+  }
+
+  #root .home-body .introduction {
+    transform: translateY(-10%);
+  }
+
+  #root .logo-home {
+    width: 10vh;
+  }
 }
 
-    /* Media queries for smaller screens */
+/* Media queries for smaller screens */
 @media only screen and (max-width: 768px) {
   .welcome-msg {
     position: relative;
