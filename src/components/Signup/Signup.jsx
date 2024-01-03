@@ -98,7 +98,7 @@ function Signup() {
 
           <button type="submit">Sign up</button>
 
-          <p>
+          <p className="login-link">
             Or <NavLink to={"/Signin"}>Log in</NavLink>
           </p>
 

@@ -7,6 +7,8 @@ function ImageGenerator() {
   const [image_url, setImage_url] = useState(defaultImage);
   const inputRef = useRef(null);
 
+  const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);
@@ -26,7 +28,7 @@ function ImageGenerator() {
           headers: {
             "Content-Type": "application/json",
             Authorization:
-              "Bearer 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",
+              `Bearer ${apiKey}`,
             "User-Agent": "Chrome",
           },
           body: JSON.stringify({

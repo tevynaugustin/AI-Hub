@@ -96,6 +96,10 @@
     text-decoration: none;
     font-weight: bold;
   }
+
+  .sign-in-body .sign-in-container .forgotten-password {
+    margin-top: 0;
+  }
   
   .sign-in-container a:hover {
     text-decoration: underline;
@@ -145,6 +149,93 @@
     animation: loadingDots 1s infinite steps(1);
     display: inline-block;
   }
+
+/* For Landscape Phones */
+@media only screen and (max-width: 950px) and (orientation: landscape) {
+  #root .sign-in-body .sign-in-container {
+    width: 100vh;
+    height: 50vh;
+    position: absolute;
+    top: 55vh;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #root .sign-in-body .logo {
+    width: 75vh !important;
+  }
+
+  #root .sign-in-body .sign-in-container .sign-in-title {
+    font-size: 4vh;
+  }
+
+  #root .sign-in-body .sign-in-container form {
+    width: 100%; /* Ensure the form takes the full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #root .sign-in-body .sign-in-container label {
+    font-size: 3.5vh;
+  }
+
+  #root .sign-in-body .sign-in-container label,
+  #root .sign-in-body .sign-in-container input {
+    width: 100%; /* Make sure label and input take full width */
+  }
+
+  #root .sign-in-body .sign-in-container p,
+  #root .sign-in-body .sign-in-container button {
+    font-size: 3vh; /* Adjust font size as needed */
+  }
+
+  #root .sign-in-body .sign-in-container input {
+    height: 2.2vh; /* Adjust input height as needed */
+    margin-bottom: 8px; /* Add margin between email input and password input */
+  }
+
+  #root .sign-in-body .sign-in-container form input::placeholder {
+    font-size: 3vh; /* Adjust placeholder font size as needed */
+  }
+
+  /* Align the login button to the right */
+  #root .sign-in-body .sign-in-container button {
+    align-self: flex-end;
+    width: 50%; /* Adjust width as needed */
+  }
+
+  #root .sign-in-body .sign-in-container .sign-up-link,
+  #root .sign-in-body .sign-in-container .forgotten-password {
+    position: relative;
+    bottom: 8vh;
+    align-self: flex-start;
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 1vh;
+  }
+}
+ 
+
+
+    /* For Phones */
+    @media only screen and (max-width: 430px) {
+      .sign-in-body .sign-in-container {
+        width: 30vh !important;
+      }
+
+      .sign-in-body .sign-in-container label {
+        font-size: 1.8vh;
+      }
+
+      .sign-in-body .sign-in-container .sign-in-title {
+        font-size: 2.2vh;
+      }
+    }
 
     /* Small Devices, 600px and below */
     @media only screen and (max-width: 600px) {
@@ -196,6 +287,10 @@
       .sign-in-body .sign-in-container input {
         height: 2vh;
       }
+
+      .sign-in-body .sign-in-container input::placeholder {
+        font-size: 1.4vh;
+      }
     }
     /* ---------------------------------------------------------------------------------------------- */
   
@@ -210,7 +305,7 @@
       }
 
       .sign-in-body .sign-in-container .sign-in-title {
-        font-size: 3vh;
+        font-size: 2.6vh;
       }
       .sign-in-body .sign-in-container {
         width: 60%;
@@ -219,7 +314,7 @@
       .sign-in-body .sign-in-container p,
       .sign-in-body .sign-in-container button,
       .sign-in-body .sign-in-container label {
-        font-size: 2.2vh;
+        font-size: 1.8vh;
       }
 
       .sign-in-body .sign-in-container input {

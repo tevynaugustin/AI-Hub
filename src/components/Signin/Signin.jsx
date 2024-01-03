@@ -80,8 +80,7 @@ function Signin() {
 
         <button type="submit">Log In</button>
 
-        <p></p>
-        <p>Or <NavLink to={'/Signup'}>Sign up</NavLink></p>
+        <p className="sign-up-link">Or <NavLink to={'/Signup'}>Sign up</NavLink></p>
         <p className="forgotten-password" onClick={handleForgotPassword}>Forgot Password?</p>
         
         {errorMessage && <p className="error-message">{errorMessage}</p>}

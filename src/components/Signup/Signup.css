@@ -108,6 +108,90 @@
     animation: loadingDots 1s infinite steps(1);
     display: inline-block;
   }
+
+  /* For Landscape Phones */
+@media only screen and (max-width: 950px) and (orientation: landscape) {
+  #root .sign-up-body .sign-up-container {
+    width: 100vh;
+    height: 62vh;
+    position: absolute;
+    top: 55vh;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #root .sign-up-body .logo {
+    width: 75vh !important;
+    top: 0;
+  }
+
+  #root .sign-up-body .sign-up-container .sign-up-title {
+    font-size: 4vh;
+  }
+
+  #root .sign-up-body .sign-up-container form {
+    width: 100%; /* Ensure the form takes the full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #root .sign-up-body .sign-up-container label {
+    font-size: 3.5vh;
+  }
+
+  #root .sign-up-body .sign-up-container label,
+  #root .sign-up-body .sign-up-container input {
+    width: 100%; /* Make sure label and input take full width */
+  }
+
+  #root .sign-up-body .sign-up-container p,
+  #root .sign-up-body .sign-up-container button {
+    font-size: 3vh; /* Adjust font size as needed */
+  }
+
+  #root .sign-up-body .sign-up-container input {
+    height: 2.2vh; /* Adjust input height as needed */
+    margin-bottom: 8px; /* Add margin between email input and password input */
+  }
+
+  #root .sign-up-body .sign-up-container form input::placeholder {
+    font-size: 3vh; /* Adjust placeholder font size as needed */
+  }
+
+  /* Align the login button to the right */
+  #root .sign-up-body .sign-up-container button {
+    align-self: flex-end;
+    width: 50%; /* Adjust width as needed */
+  }
+
+  #root .sign-up-body .sign-up-container .login-link {
+    position: relative;
+    bottom: 8vh;
+    align-self: flex-start;
+    width: 50%;
+    margin-top: 1.5vh;
+  }
+}
+
+    /* For Phones */
+    @media only screen and (max-width: 430px) {
+      .sign-up-body .sign-up-container {
+        width: 30vh !important;
+      }
+
+      .sign-up-body .sign-up-container label {
+        font-size: 1.8vh;
+      }
+
+      .sign-up-body .sign-up-container .sign-up-title {
+        font-size: 2.3vh;
+      }
+    }
   
     /* Small Devices, 600px and below */
     @media only screen and (max-width: 600px) {
@@ -125,11 +209,6 @@
       }
     }
   
-    /* Small Devices, 600px and up */
-    @media only screen and (min-width: 600px) {
-  
-    }
-  
     /* Medium Devices, 768px and up */
     @media screen and (min-width: 768px) {
       .sign-up-body .logo {
@@ -140,17 +219,21 @@
       }
 
       .sign-up-body .sign-up-container {
-        width: 50%;
+        width: 40vh;
       }
 
       .sign-up-body .sign-up-container p,
       .sign-up-body .sign-up-container button,
       .sign-up-body .sign-up-container label {
-        font-size: 1.8vh;
+        font-size: 1.6vh;
       }
 
       .sign-up-body .sign-up-container input {
         height: 2vh;
+      }
+
+      .sign-up-body .sign-up-container input::placeholder {
+        font-size: 1.5vh;
       }
     }
     /* ---------------------------------------------------------------------------------------------- */
@@ -168,6 +251,7 @@
       .sign-up-body .sign-up-container .sign-in-title {
         font-size: 3vh;
       }
+
       .sign-up-body .sign-up-container {
         width: 60%;
       }
@@ -175,7 +259,7 @@
       .sign-up-body .sign-up-container p,
       .sign-up-body .sign-up-container button,
       .sign-up-body .sign-up-container label {
-        font-size: 2.2vh;
+        font-size: 1.8vh;
       }
 
       .sign-up-body .sign-up-container input {
