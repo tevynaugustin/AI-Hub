@@ -2,12 +2,11 @@ import React, { useRef, useState } from "react";
 import "./ImageGenerator.css";
 import { useNavigate } from "react-router-dom";
 import defaultImage from "./default-image.avif";
+import ImageGenerationApiKey from '../../apiKey'
 
 function ImageGenerator() {
   const [image_url, setImage_url] = useState(defaultImage);
   const inputRef = useRef(null);
-
-  const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
 
   const navigate = useNavigate();
 
@@ -28,7 +27,7 @@ function ImageGenerator() {
           headers: {
             "Content-Type": "application/json",
             Authorization:
-              `Bearer ${apiKey}`,
+              `Bearer ${ImageGenerationApiKey}`,
             "User-Agent": "Chrome",
           },
           body: JSON.stringify({
