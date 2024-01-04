@@ -1,0 +1,38 @@
+.cs-main-container .cs-chat-container .cs-message-list {
+    background-color: #0F0F0F;
+}
+
+#root .cs-main-container {
+    border: solid 2px #005B41;
+}
+
+#root .cs-message__content {
+    background-color: #005B41;
+    color: white;
+}
+
+#root .cs-message--outgoing .cs-message__content {
+    background-color: #232D3F;
+}
+
+#root .cs-message {
+    padding-top: 9vh;
+    padding-left: 1vh;
+}
+
+.backButton {
+    position: absolute;
+    top: 2vh;
+    left: 3vh;
+    z-index: 999;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #005B41;
+    padding: 15px;
+    transition: .3s ease-in-out;
+}
+.backButton:hover {
+    background-color: #005B41;
+    border: 2px solid white;
+    cursor: pointer;
+}

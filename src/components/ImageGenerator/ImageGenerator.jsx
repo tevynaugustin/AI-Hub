@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import "./ImageGenerator.css";
 import { useNavigate } from "react-router-dom";
 import defaultImage from "./default-image.avif";
-import ImageGenerationApiKey from '../../apiKey'
+import ImageGenerationApiKey from '../../imageApiKey'
 
 function ImageGenerator() {
   const [image_url, setImage_url] = useState(defaultImage);

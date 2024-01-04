@@ -262,9 +262,9 @@
 
   .home-body .welcome-msg {
     position: absolute;
-    left: 34%;
-    top: 37%;
-    transform: translate(-37%, -34%);
+    top: 36vh;
+    left: 26vh;
+    transform: translate(-36%, -30%);
     font-size: 4rem;
     color: #fff;
     text-align: center;
@@ -272,7 +272,8 @@
   .home-body .introduction {
     text-align: center;
     font-size: 1.5rem;
-    top: 50%;
+    top: 53vh;
+    left: 2vh;
     transform: translateY(-50%);
   }
 
@@ -283,27 +284,28 @@
   
 /* Large Devices, 1200px and up */
 @media only screen and (min-width: 1200px) {
-  .home-body .landing-photo .logo-home {
+  #root .home-body .landing-photo .logo-home {
     width: 20vh;
     margin-top: 0;
     left: 15vh;
   }
 
-  .home-body .menu-icon  {
+  #root .home-body .menu-icon  {
     position: absolute;
     top: 1.7vh;
     left: 6vh;
   }
 
-  .home-body .introduction {
+  #root .home-body .introduction {
     top: 75vh;
     text-align: left;
   }
 
-  .home-body .welcome-msg {
+  #root .home-body .welcome-msg {
     text-align: left;
-    left: 21vh;
-    top: 52vh;
-    transform: translate(-51%, -30%);
+    left: 1.5vh;
+    transform: translate(0, 0);
+    top: 49vh;
+    width: 75vw;
   }
 }

@@ -4,7 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-apiKey.js
+imageApiKey.js
+chatApiKey.js
 
 # testing
 /coverage

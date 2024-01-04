@@ -30,8 +30,8 @@ function Navbar() {
           <NavLink to="/imagegenerator" className="nav-link">
             Image Generator
           </NavLink>
-          <NavLink to="/AIChat" className="nav-link">
-            Chat
+          <NavLink to="/lumina" className="nav-link">
+            Lumina
           </NavLink>
           <NavLink to="/texttospeech" className="nav-link">
             Text to Speech
