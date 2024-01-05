@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import Navbar from "../navbar/navbar";
 import Typewriter from "typewriter-effect";
-import bgImg from "./landing-pic.png";
+import bgImg from "./cover-photo.webp";
 // ------------------------------------------------------------------------------------------------------------
 
 function Home() {
