@@ -8,6 +8,7 @@ import ForgotPassword from './components/Forgot Password/forgottenpassword';
 import Myaccount from './components/My Account/myaccount';
 import ImageGenerator from './components/ImageGenerator/ImageGenerator';
 import Lumina from './components/Lumina/lumina'
+import ImageAnalyzer from './components/Image Analyzer/imageanalyzer';
 import { AuthProvider } from './AuthContext';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/myaccount" element={<Myaccount/>}/>
         <Route exact path="/imagegenerator" element={<ImageGenerator/>}/>
         <Route exact path="/lumina" element={<Lumina/>}/>
+        <Route exact path="/ImageAnalyzer" element={<ImageAnalyzer/>}/>
       </Routes>
       </AuthProvider>
     </Router>

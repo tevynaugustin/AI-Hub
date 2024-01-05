@@ -33,8 +33,8 @@ function Navbar() {
           <NavLink to="/lumina" className="nav-link">
             Lumina
           </NavLink>
-          <NavLink to="/texttospeech" className="nav-link">
-            Text to Speech
+          <NavLink to="/ImageAnalyzer" className="nav-link">
+            Vision
           </NavLink>
         </div>
       </nav>
