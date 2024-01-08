@@ -6,6 +6,9 @@ import "./Home.css";
 import Navbar from "../navbar/navbar";
 import Typewriter from "typewriter-effect";
 import bgImg from "./cover-photo.webp";
+import imageGeneratorBG from './image-generator-bg.webp'
+import luminaBG from './lumina-background-img.jpg'
+import imageAnalyzerBG from "./image-analyzer.png";
 // ------------------------------------------------------------------------------------------------------------
 
 function Home() {
@@ -24,6 +27,18 @@ function Home() {
     // const uid = user.uid;
   }
 
+  const scrollToShowcase = () => {
+    const showcaseContainer = document.querySelector(".showcase-container");
+  
+    if (showcaseContainer) {
+      showcaseContainer.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+      });
+    }
+  };
+
   // Log Out Function
   const handleLogOut = () => {
     signOut(auth)
@@ -33,20 +48,6 @@ function Home() {
       .catch((error) => {
         console.error("Error Signing Out:", error);
       });
-  };
-  // --------------------------------------------------------------------------------------------------------------------
-
-  // Function for floating arrow
-  const scrollToFeaturedFeeds = () => {
-    const featuredFeedsTitle = document.getElementById("featured-feeds-title");
-
-    if (featuredFeedsTitle) {
-      featuredFeedsTitle.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "start",
-      });
-    }
   };
   // --------------------------------------------------------------------------------------------------------------------
 
@@ -82,7 +83,39 @@ function Home() {
         </button>
 
         {/* Floating Arrow */}
-        <div className="floating-arrow" onClick={scrollToFeaturedFeeds}></div>
+        <div className="floating-arrow" onClick={scrollToShowcase}></div>
+
+        <div className="showcase-container">
+  <h1 className="showcase-title">Available Services</h1>
+  <div className="showcase-items">
+    {/* Card for Image Generator */}
+    <div className="service-card" onClick={() => navigate("/imagegenerator")}>
+      <img className="card-background" src={imageGeneratorBG} alt="Image Generator" />
+      <div className="card-content">
+        <h2 className="card-title">Image Generator</h2>
+        <p>Generate stunning AI images with our advanced Image Generator.</p>
+      </div>
+    </div>
+
+    {/* Card for Lumina */}
+    <div className="service-card" onClick={() => navigate("/lumina")}>
+      <img className="card-background" src={luminaBG} alt="Lumina" />
+      <div className="card-content">
+        <h2 className="card-title">Lumina</h2>
+        <p>Experience the magic of Lumina - An AI companion.</p>
+      </div>
+    </div>
+
+    {/* Card for Image Analyzer */}
+    <div className="service-card" onClick={() => navigate("/ImageAnalyzer")}>
+      <img className="card-background" src={imageAnalyzerBG} alt="Image Analyzer" />
+      <div className="card-content">
+        <h2 className="card-title">Image Analyzer</h2>
+        <p>Analyze images with precision using our Image Analyzer tool.</p>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   );
