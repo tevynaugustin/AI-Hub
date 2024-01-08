@@ -142,8 +142,8 @@
 }
 
 .floating-arrow {
-  position: absolute;
-  bottom: 10vh;
+  position: relative;
+  top: 45vh;
   left: 50%;
   transform: translateX(-50%);
   width: 30px;
@@ -238,7 +238,7 @@
 }
 
 /* For Small Phones */
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 400px) {
   #root .home-body .welcome-msg {
     font-size: 7vh;
     margin-bottom: 0;
@@ -249,8 +249,26 @@
     transform: translateY(-10%);
   }
 
+  #root .navbar .logo-home {
+    width: 9vh;
+  }
+
+  #root .floating-arrow {
+    display: none;
+  }
+
+  #root .showcase-container {
+    top: 40vh;
+  }
+}
+
+@media only screen and (max-width: 450px) {
   #root .logo-home {
-    width: 10vh;
+    width: 6.5vh;
+  }
+
+  #root .showcase-container {
+    top: 40vh;
   }
 }
 
@@ -263,6 +281,14 @@
     font-size: 3rem;
     margin-left: 5%;
     text-align: center;
+  }
+
+  #root .showcase-container {
+    top: 0vh;
+  }
+
+  #root .showcase-title {
+    margin-bottom: 2vh;
   }
 
   .introduction {
@@ -307,8 +333,7 @@
   }
 
   .floating-arrow {
-    position: relative;
-    top: 15vh;
+    visibility: hidden;
   }
 }
   

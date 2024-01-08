@@ -58,6 +58,7 @@ function Home() {
         <div className="landing-photo">
           <img src={bgImg} alt="" />
         </div>
+        <>
         <h1 className="welcome-msg">
           <Typewriter
             onInit={(typewriter) => {
@@ -77,20 +78,19 @@ function Home() {
           not just a platform—it's an adventure waiting to unfold. Dive in and
           let the excitement begin!
         </p>
+        <div class="floating-arrow" onClick={scrollToShowcase}></div>
+        </>
 
         <button className="logOut" onClick={handleLogOut}>
           Log Out
         </button>
-
-        {/* Floating Arrow */}
-        <div className="floating-arrow" onClick={scrollToShowcase}></div>
 
         <div className="showcase-container">
   <h1 className="showcase-title">Available Services</h1>
   <div className="showcase-items">
     {/* Card for Image Generator */}
     <div className="service-card" onClick={() => navigate("/imagegenerator")}>
-      <img className="card-background" src={imageGeneratorBG} alt="Image Generator" />
+      <img className="card-background" src={imageGeneratorBG} alt="Generator" />
       <div className="card-content">
         <h2 className="card-title">Image Generator</h2>
         <p>Generate stunning AI images with our advanced Image Generator.</p>
@@ -108,7 +108,7 @@ function Home() {
 
     {/* Card for Image Analyzer */}
     <div className="service-card" onClick={() => navigate("/ImageAnalyzer")}>
-      <img className="card-background" src={imageAnalyzerBG} alt="Image Analyzer" />
+      <img className="card-background" src={imageAnalyzerBG} alt="Analyzer" />
       <div className="card-content">
         <h2 className="card-title">Image Analyzer</h2>
         <p>Analyze images with precision using our Image Analyzer tool.</p>
