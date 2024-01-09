@@ -1,15 +1,13 @@
 import React, { useRef, useState } from "react";
 import "./ImageGenerator.css";
 import { useNavigate } from "react-router-dom";
-import defaultImage from "./default-image.avif";
-import ImageGenerationApiKey from '../../imageApiKey'
+import defaultImage from "./default-image.jpg";
+import ImageGenerationApiKey from '../../imageApiKey';
 
 function ImageGenerator() {
   const [image_url, setImage_url] = useState(defaultImage);
   const inputRef = useRef(null);
-
   const navigate = useNavigate();
-
   const [loading, setLoading] = useState(false);
 
   const imageGenerator = async () => {
@@ -26,8 +24,7 @@ function ImageGenerator() {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization:
-              `Bearer ${ImageGenerationApiKey}`,
+            Authorization: `Bearer ${ImageGenerationApiKey}`,
             "User-Agent": "Chrome",
           },
           body: JSON.stringify({
@@ -60,16 +57,16 @@ function ImageGenerator() {
 
   return (
     <div className="ai-image-generator">
-      <div className="header">
+      <header className="header">
         AI Image <span>Generator</span>
-      </div>
+      </header>
       <div className="img-loading">
         <div className="image">
           <img src={image_url} alt="" />
         </div>
         <div className="loading">
           <div className={loading ? "loading-bar-full" : "loading-bar"}></div>
-          <div className={loading ? "loading-text": 'display-none'}>Loading...</div>
+          <div className={loading ? "loading-text" : 'display-none'}>Loading...</div>
         </div>
       </div>
       <div className="search-box">
@@ -79,13 +76,12 @@ function ImageGenerator() {
           className="search-input"
           placeholder="Describe what you want to see! :)"
         />
-        <div className="generate-btn" onClick={imageGenerator}>
+        <button className="generate-btn" onClick={imageGenerator}>
           Generate!
-        </div>
+        </button>
       </div>
 
       <button className="back-button" onClick={() => backToHome()}>Go back to Home Page</button>
-
     </div>
   );
 }

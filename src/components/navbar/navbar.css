@@ -68,10 +68,6 @@
     .menu-icon {
         right: 20vh !important;
     }
-
-    .dropdown {
-        left: -22vh !important;
-    }
 }
 
 @keyframes slideIn {
@@ -93,11 +89,38 @@
     #root .navbar .navbar-container .nav-link::before{
         display: none;
     }
+
+    #root .navbar svg {
+        font-size: .7em;
+    }
+
+    #root .navbar .menu-icon {
+        bottom: .3vh;
+    }
+
+    #root .logo-home {
+        position: absolute;
+        bottom: 1.2vh;
+    }
 }
 
 /* for Phones */
 @media only screen and (max-width: 430px) {
     #root .navbar .navbar-container {
         display: none;
+    }
+
+    .navbar .menu-icon svg {
+        font-size: .8em;
+    }
+
+    .navbar .menu-icon {
+        position: absolute;
+        bottom: .2vh;
+    }
+
+    .navbar .logo-home {
+        position: absolute;
+        bottom: .8vh;
     }
 }

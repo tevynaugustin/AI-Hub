@@ -238,7 +238,7 @@
 }
 
 /* For Small Phones */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 430px) {
   #root .home-body .welcome-msg {
     font-size: 7vh;
     margin-bottom: 0;
@@ -259,6 +259,24 @@
 
   #root .showcase-container {
     top: 40vh;
+  }
+
+  #root .service-card {
+    max-width: 100px;
+    max-height: 200px;
+  }
+  #root .card-content {
+    top: 0;
+  }
+  #root .showcase-container .card-title {
+    font-size: 14px;
+  }
+  #root .showcase-container .card-content p {
+    font-size: 11px;
+    height: max-content;
+    text-align: center;
+    position: relative;
+
   }
 }
 
