@@ -1,7 +1,4 @@
-// ImageAnalyzer.js
-
-import React, { useState } from "react";
-import VISION_API_KEY from "../../visionApiKey";
+import React, { useState, useEffect } from "react";
 import "./imageanalyzer.css";
 import { useNavigate } from "react-router-dom";
 
@@ -9,46 +6,62 @@ const ImageAnalyzer = () => {
   const [image, setImage] = useState(null);
   const [content, setContent] = useState(null);
   const [loading, setLoading] = useState(false);
-
+  const [apiKey, setApiKey] = useState(null);
+  const [base64_image, setBase64Image] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Fetch the API key when the component mounts
+    const fetchApiKey = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/get-api-key");
+        const data = await response.json();
+        setApiKey(data.apiKey);
+      } catch (error) {
+        console.error("Error fetching API key:", error);
+      }
+    };
+
+    fetchApiKey();
+  }, []); // Empty dependency array ensures this effect runs only once
 
   const handleBackButton = () => {
     navigate("/Home");
-  }
+  };
 
   const handleFileChange = (event) => {
     const selectedImage = event.target.files[0];
-    setImage(selectedImage);
+
+    if (selectedImage) {
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        const base64_image = e.target.result.split(",")[1];
+        setImage(selectedImage);
+        setBase64Image(base64_image); // Set this in your state to be used later
+      };
+
+      reader.readAsDataURL(selectedImage);
+    }
   };
 
   const handleAnalyzeImage = async () => {
     try {
-      if (!image) {
+      if (!image || !base64_image) {
         alert("Please select an image first.");
         return;
       }
 
-      const api_key = VISION_API_KEY;
+      setLoading(true);
 
-      setLoading(true); // Set loading to true when analysis starts
-
-      // Function to encode the image
-      const encodeImage = async () => {
-        const base64_image = await new Promise((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onerror = reject;
-          reader.onload = () => resolve(reader.result.split(",")[1]);
-          reader.readAsDataURL(image);
-        });
-        return base64_image;
-      };
-
-      // Getting the base64 string
-      const base64_image = await encodeImage();
+      // Log the size of the image
+      console.log("Image size:", image.size);
 
       const headers = {
+        Authorization: `Bearer ${apiKey}`,
+        "Access-Control-Allow-Credentials": "true",
+        credentials: "include",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${api_key}`,
       };
 
       const payload = {
@@ -58,9 +71,20 @@ const ImageAnalyzer = () => {
             role: "user",
             content: [
               {
+                type: "image",
+                image: {
+                  data: base64_image,
+                },
+              },
+              {
                 type: "text",
                 text: "What’s in this image?",
               },
+            ],
+          },
+          {
+            role: "user",
+            content: [
               {
                 type: "image_url",
                 image_url: {
@@ -72,36 +96,48 @@ const ImageAnalyzer = () => {
         ],
         max_tokens: 300,
       };
+      
+      
 
-      const apiResponse = await fetch(
-        "https://api.openai.com/v1/chat/completions",
-        {
-          method: "POST",
-          headers,
-          body: JSON.stringify(payload),
-        }
-      );
+      const apiResponse = await fetch("http://localhost:5000/image-analyzer", {
+        method: "POST",
+        headers,
+        body: JSON.stringify(payload),
+      });
+
+      // Log the response status
+      console.log("Response Status:", apiResponse.status);
+
+      if (!apiResponse.ok) {
+        throw new Error(
+          `HTTP error! Status: ${apiResponse.status} - ${apiResponse.statusText}`
+        );
+      }
 
       const data = await apiResponse.json();
-      console.log(data);
-      console.log(data?.choices?.[0]?.message?.content);
+
+      // Log the response from the server
+      console.log("Server response:", data);
+
       const dataResponse = data.choices[0].message.content;
 
       setContent(dataResponse);
     } catch (error) {
       console.error("Error analyzing image:", error);
     } finally {
-      setLoading(false); // Set loading to false when analysis completes
+      setLoading(false);
     }
   };
 
   return (
     <div className="visionContainer">
-      <button className="back-button" onClick={handleBackButton}>Back Home</button>
+      <button className="back-button" onClick={handleBackButton}>
+        Back Home
+      </button>
       {image && (
         <div>
           <img
-          className="preview-img"
+            className="preview-img"
             src={URL.createObjectURL(image)}
             alt="Preview"
             style={{ maxWidth: "100%", maxHeight: "200px" }}

@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import "./ImageGenerator.css";
 import { useNavigate } from "react-router-dom";
 import defaultImage from "./default-image.jpg";
-import ImageGenerationApiKey from '../../imageApiKey';
 
 function ImageGenerator() {
   const [image_url, setImage_url] = useState(defaultImage);
@@ -19,22 +18,19 @@ function ImageGenerator() {
 
     try {
       const response = await fetch(
-        "https://api.openai.com/v1/images/generations",
+        "http://localhost:5000/generate-image",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${ImageGenerationApiKey}`,
-            "User-Agent": "Chrome",
           },
           body: JSON.stringify({
-            model: "dall-e-3",
             prompt: `${inputRef.current.value}`,
-            n: 1,
-            size: "1024x1024",
           }),
         }
       );
+
+      console.log('Server response:', response);
 
       if (!response.ok) {
         const errorText = await response.text();
