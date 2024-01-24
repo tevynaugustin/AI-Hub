@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./myaccount.css"; // Import the CSS file for styling
+import "./myaccount.css";
 import {
   updateProfile,
   updatePassword,
@@ -10,9 +10,11 @@ import {
   verifyBeforeUpdateEmail,
   deleteUser
 } from "firebase/auth";
-import logo from '../../main images/logo.png'
+import logo from '../../main images/logo.png';
+
 
 function Myaccount() {
+  // State variables for form inputs, error handling, and loading status
   const [newEmail, setNewEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [newDisplayName, setNewDisplayName] = useState("");
@@ -22,9 +24,9 @@ function Myaccount() {
   const [loading, setLoading] = useState("");
   const navigate = useNavigate();
 
+  // Firebase authentication instance and current user
   const auth = getAuth();
   const user = auth.currentUser;
-
 
   // Reauthenticate function
   const reauthenticate = async () => {
@@ -56,11 +58,7 @@ function Myaccount() {
     }
   }, [user]);
 
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
+  // Handler for updating email
   const handleUpdateEmail = async (e) => {
     e.preventDefault();
 
@@ -101,6 +99,7 @@ function Myaccount() {
     }
   };
 
+  // Handler for updating password
   const handleUpdatePassword = async (e) => {
     e.preventDefault();
 
@@ -120,6 +119,7 @@ function Myaccount() {
     }
   };
 
+  // Handler for updating display name
   const handleUpdateDisplayName = async (e) => {
     e.preventDefault();
 
@@ -152,21 +152,24 @@ function Myaccount() {
     }
   };
 
+  // Navigate back to Home page
   const backToHome = () => {
     navigate("/Home");
   };
 
+  // Handler for user deletion
   const userDeletion = () => {
     deleteUser(user).then(() => {
         setSuccess("User Deleted!");
         setTimeout(() => {
-            navigate("/Signup")
-        }, 1500)
+            navigate("/Signup");
+        }, 1500);
     }).catch((error) => {
-        setError("User Deletion Error:", error)
-    })
-  }
+        setError("User Deletion Error:", error);
+    });
+  };
 
+  // JSX for the Myaccount component
   return (
     <>
     <img className="my-account-logo" src={logo} alt="" />
@@ -175,6 +178,7 @@ function Myaccount() {
       {error && <div className="error-message">{error}</div>}
       {success && <div className="success-message">{success}</div>}
 
+      {/* Form for updating display name */}
       <form className="update-form" onSubmit={handleUpdateDisplayName}>
         <label>Display Name:</label>
         <input
@@ -185,6 +189,7 @@ function Myaccount() {
         <button type="submit">Update Display Name</button>
       </form>
 
+      {/* Form for updating email */}
       <form className="update-form" onSubmit={handleUpdateEmail}>
         <label>Email:</label>
         <input
@@ -203,6 +208,7 @@ function Myaccount() {
         <button type="submit">Update Email</button>
       </form>
 
+      {/* Form for updating password */}
       <form className="update-form" onSubmit={handleUpdatePassword}>
         <label>Password:</label>
         <input
@@ -213,9 +219,12 @@ function Myaccount() {
         <button type="submit">Update Password</button>
       </form>
 
+      {/* Button to navigate back to Home page */}
       <button className="back-button" onClick={backToHome}>
         Back to Home Page
       </button>
+
+      {/* Button for user deletion */}
       <button className="delete-user" onClick={userDeletion}>Delete User</button>
     </div>
     </>

@@ -3,9 +3,11 @@ import "./Signup.css";
 import "../../firebase";
 import { NavLink, useNavigate } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import logo from '../../main images/logo.png'
+import logo from '../../main images/logo.png';
 
+// Component for user signup
 function Signup() {
+  // State variables for form inputs and error handling
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [displayName, setDisplayName] = useState("");
@@ -13,6 +15,7 @@ function Signup() {
   const [loading, setLoading] = useState(null);
   const navigate = useNavigate();
 
+  // Function to handle user signup
   const handleSignUp = (e) => {
     e.preventDefault();
     const auth = getAuth();
@@ -52,6 +55,7 @@ function Signup() {
       });
   };
 
+  // JSX for the signup form
   return (
     <div className="sign-up-body">
       <img className="logo" src={logo} alt="" />
@@ -60,6 +64,8 @@ function Signup() {
           <h2 className="sign-up-title">Sign Up</h2>
         </div>
         <form onSubmit={handleSignUp}>
+          
+          {/* Input for display name */}
           <label htmlFor="displayName">Enter your display name</label>
           <input
             required
@@ -72,6 +78,7 @@ function Signup() {
             }}
           />
 
+          {/* Input for email */}
           <label htmlFor="email">Enter an email</label>
           <input
             required
@@ -84,6 +91,7 @@ function Signup() {
             }}
           />
 
+          {/* Input for password */}
           <label htmlFor="password">Enter a password</label>
           <input
             required
@@ -96,13 +104,18 @@ function Signup() {
             }}
           />
 
+          {/* Signup button */}
           <button type="submit">Sign up</button>
 
+          {/* Link to login */}
           <p className="login-link">
             Or <NavLink to={"/Signin"}>Log in</NavLink>
           </p>
 
+          {/* Display error message */}
           {errorMessage && <p className="error-message">{errorMessage}</p>}
+
+          {/* Display loading message */}
           {loading && <p className="loading"></p>}
         </form>
       </div>

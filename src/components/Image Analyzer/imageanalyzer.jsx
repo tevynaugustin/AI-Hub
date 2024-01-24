@@ -23,7 +23,7 @@ const ImageAnalyzer = () => {
     };
 
     fetchApiKey();
-  }, []); // Empty dependency array ensures this effect runs only once
+  }, []);
 
   const handleBackButton = () => {
     navigate("/Home");
@@ -38,7 +38,7 @@ const ImageAnalyzer = () => {
       reader.onload = (e) => {
         const base64_image = e.target.result.split(",")[1];
         setImage(selectedImage);
-        setBase64Image(base64_image); // Set this in your state to be used later
+        setBase64Image(base64_image); 
       };
 
       reader.readAsDataURL(selectedImage);
