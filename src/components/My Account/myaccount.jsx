@@ -21,7 +21,7 @@ function Myaccount() {
   const [currentPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const [loading, setLoading] = useState("");
+  const [setLoading] = useState("");
   const navigate = useNavigate();
 
   // Firebase authentication instance and current user
@@ -67,10 +67,6 @@ function Myaccount() {
       setSuccess(""); // Clear previous success messages
 
       if (user) {
-        const credential = EmailAuthProvider.credential(
-            user.email,
-          currentPassword
-        );
 
         await reauthenticate(user); // Use the reauthenticate function
         await verifyBeforeUpdateEmail(user, newEmail);

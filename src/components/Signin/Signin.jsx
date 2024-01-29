@@ -37,6 +37,7 @@ function Signin() {
           case "auth/too-many-requests":
             setErrorMessage("Oops! Too many failed attempts :( You can reset your password here or try later.");
             break;
+            default:
         }
       }).finally(() => {
         setLoading(false);
