@@ -5,13 +5,10 @@
 }
 
 .welcome-msg {
-  text-align: left;
-  margin-left: 10%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   font-size: 4rem;
   color: #fff;
+  margin-left: 10.8vw;
+  position: relative;
 }
 
 .logOut {
@@ -41,9 +38,7 @@
   font-size: 1.2rem;
   color: #bbb;
   max-width: 775px;
-  position: absolute;
-  top: 65%;
-  transform: translateY(-50%);
+  position: relative;
 }
 
 .home-body .landing-photo {
@@ -238,15 +233,11 @@
 }
 
 /* For Small Phones */
-@media only screen and (max-width: 430px) {
-  #root .home-body .welcome-msg {
-    font-size: 7vh;
+@media only screen and (max-width: 390px) {
+   .home-body .welcome-msg {
+    font-size: 2.5rem;
     margin-bottom: 0;
     margin-top: 12%;
-  }
-
-  #root .home-body .introduction {
-    transform: translateY(-10%);
   }
 
   #root .navbar .logo-home {
@@ -280,7 +271,14 @@
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 430px) {
+
+  #root .home-body .welcome-msg {
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-top: 12%;
+  }
+
   #root .logo-home {
     width: 6.5vh;
   }
@@ -293,11 +291,7 @@
 /* Media queries for smaller screens */
 @media only screen and (max-width: 768px) {
   .welcome-msg {
-    position: relative;
-    position: relative;
-    margin-top: 10%;
-    font-size: 3rem;
-    margin-left: 5%;
+    font-size: 3.5rem;
     text-align: center;
   }
 
@@ -370,20 +364,15 @@
   }
 
   .home-body .welcome-msg {
-    position: absolute;
-    top: 36vh;
-    left: 26vh;
-    transform: translate(-36%, -30%);
     font-size: 4rem;
     color: #fff;
-    text-align: center;
+    text-align: left;
   }
   .home-body .introduction {
     text-align: center;
     font-size: 1.5rem;
-    top: 53vh;
+
     left: 2vh;
-    transform: translateY(-50%);
   }
 
   .floating-arrow {
@@ -410,15 +399,6 @@
   }
 
   #root .home-body .introduction {
-    top: 75vh;
     text-align: left;
-  }
-
-  #root .home-body .welcome-msg {
-    text-align: left;
-    left: 1.5vh;
-    transform: translate(0, 0);
-    top: 49vh;
-    width: 75vw;
   }
 }

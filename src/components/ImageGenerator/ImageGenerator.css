@@ -10,9 +10,11 @@
   }
   
   .header {
+    width: 90vw;
     font-size: 36px;
     font-weight: 500;
     color: #333;
+    text-align: center;
   }
   
   .header span {
@@ -21,7 +23,7 @@
   }
   
   .img-loading img {
-    max-width: 100%;
+    max-width: 25vw;
     height: auto;
     border-radius: 8px; /* Add border-radius for a softer image appearance */
   }
@@ -71,10 +73,29 @@
   }
   
   .ai-image-generator .loading-bar-full {
-    width: 512px; /* Change initial width to 0 */
+    width: 50vh; /* Change initial width to 0 */
     height: 8px;
     background-color: #00bfff;
     transition: width 15s; /* Adjust the duration to your preference */
+  }
+
+  .error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+    animation: shake 0.5s ease-in-out; /* Add shake animation */
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(5px);
+    }
   }
   
   .loading-text {
@@ -104,5 +125,11 @@
   @media only screen and (max-width: 430px) {
     .ai-image-generator {
         max-width: 400px;
+    }
+  }
+
+  @media only screen and (max-width: 370px) {
+    #root .header {
+      font-size:1.8rem;
     }
   }

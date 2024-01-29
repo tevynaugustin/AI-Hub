@@ -9,6 +9,7 @@ function ImageGenerator() {
   const inputRef = useRef(null);
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   // Function to generate image using AI
   const imageGenerator = async () => {
@@ -16,6 +17,8 @@ function ImageGenerator() {
     if (inputRef.current.value === "") {
       return;
     }
+
+    setError(null);
 
     // Set loading indicator to true
     setLoading(true);
@@ -49,6 +52,9 @@ function ImageGenerator() {
 
     } catch (error) {
       console.error("Error generating image:", error);
+      setError("Please try entering a different prompt.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -74,6 +80,8 @@ function ImageGenerator() {
           <div className={loading ? "loading-text" : 'display-none'}>Loading...</div>
         </div>
       </div>
+      {/* Display error message if there's an error */}
+      {error && <div className="error-message">{error}</div>}
       {/* Search box for input */}
       <div className="search-box">
         <input
