@@ -18,11 +18,12 @@ function Myaccount() {
   const [newEmail, setNewEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [newDisplayName, setNewDisplayName] = useState("");
-  const [currentPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const [setLoading] = useState("");
+  const [loading, setLoading] = useState(null);
   const navigate = useNavigate();
+
+  loading(null);
 
   // Firebase authentication instance and current user
   const auth = getAuth();
