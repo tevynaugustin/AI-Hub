@@ -44,9 +44,6 @@ function Navbar() {
           <NavLink to="/imagegenerator" className="nav-link">
             Image Generator
           </NavLink>
-          <NavLink to="/lumina" className="nav-link">
-            Lumina
-          </NavLink>
           <NavLink to="/ImageAnalyzer" className="nav-link">
             Vision
           </NavLink>

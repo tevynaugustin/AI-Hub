@@ -7,7 +7,6 @@ import Navbar from "../navbar/navbar";
 import Typewriter from "typewriter-effect";
 import bgImg from "./cover-photo.webp";
 import imageGeneratorBG from "./image-generator-bg.webp";
-import luminaBG from "./lumina-background-img.jpg";
 import imageAnalyzerBG from "./image-analyzer.png";
 
 function Home() {
@@ -107,15 +106,6 @@ function Home() {
                 <p>
                   Generate stunning AI images with our advanced Image Generator.
                 </p>
-              </div>
-            </div>
-
-            {/* Card for Lumina */}
-            <div className="service-card" onClick={() => navigate("/lumina")}>
-              <img className="card-background" src={luminaBG} alt="Lumina" />
-              <div className="card-content">
-                <h2 className="card-title">Lumina</h2>
-                <p>Experience the magic of Lumina - An AI companion.</p>
               </div>
             </div>
 

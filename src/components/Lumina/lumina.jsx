@@ -61,7 +61,7 @@ const Lumina = () => {
 
     try {
       // Send user's message to the server
-      const response = await fetch('http://localhost:5000/ai-chatbot', {
+      const response = await fetch('https://ai-hub-backend-production.up.railway.app/ai-chatbot', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

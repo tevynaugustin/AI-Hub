@@ -99,7 +99,7 @@ const ImageAnalyzer = () => {
       
       
 
-      const apiResponse = await fetch("http://localhost:5000/image-analyzer", {
+      const apiResponse = await fetch("https://ai-hub-backend-production.up.railway.app/image-analyzer", {
         method: "POST",
         headers,
         body: JSON.stringify(payload),

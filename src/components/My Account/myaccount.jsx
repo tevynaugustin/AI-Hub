@@ -23,8 +23,6 @@ function Myaccount() {
   const [loading, setLoading] = useState(null);
   const navigate = useNavigate();
 
-  loading(null);
-
   // Firebase authentication instance and current user
   const auth = getAuth();
   const user = auth.currentUser;

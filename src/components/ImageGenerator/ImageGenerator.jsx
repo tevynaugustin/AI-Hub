@@ -26,7 +26,7 @@ function ImageGenerator() {
     try {
       // Send a request to the server to generate an image
       const response = await fetch(
-        "http://localhost:5000/generate-image",
+        "https://ai-hub-backend-production.up.railway.app/generate-image",
         {
           method: "POST",
           headers: {

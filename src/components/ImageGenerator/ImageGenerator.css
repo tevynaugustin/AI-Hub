@@ -73,7 +73,7 @@
   }
   
   .ai-image-generator .loading-bar-full {
-    width: 50vh; /* Change initial width to 0 */
+    width: 25vh; /* Change initial width to 0 */
     height: 8px;
     background-color: #00bfff;
     transition: width 15s; /* Adjust the duration to your preference */
