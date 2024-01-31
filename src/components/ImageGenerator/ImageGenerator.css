@@ -23,7 +23,9 @@
   }
   
   .img-loading img {
-    max-width: 25vw;
+    position: relative;
+    left: 10%;
+    width: 75%;
     height: auto;
     border-radius: 8px; /* Add border-radius for a softer image appearance */
   }
