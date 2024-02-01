@@ -63,8 +63,16 @@
     background-color: #0077cc;
   }
 
+  .loading {
+    width: 75%;
+    text-align: center;
+  }
+
   .loading-bar {
-    width: 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    left: 13%;
   }
   
   .loading-bar,
