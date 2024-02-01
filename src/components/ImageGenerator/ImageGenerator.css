@@ -66,10 +66,12 @@
   .loading {
     width: 75%;
     text-align: center;
+    position: relative;
+    left: 10%;
   }
 
   .loading-bar {
-    width: 100%;
+    width: 0;
     text-align: center;
     position: relative;
     left: 13%;
@@ -83,7 +85,7 @@
   }
   
   .ai-image-generator .loading-bar-full {
-    width: 25vh; /* Change initial width to 0 */
+    width: 100%; /* Change initial width to 0 */
     height: 8px;
     background-color: #00bfff;
     transition: width 15s; /* Adjust the duration to your preference */
@@ -110,7 +112,7 @@
   
   .loading-text {
     font-size: 16px;
-    color: #333;
+    color: #fff;
   }
   
   .display-none {
