@@ -18,7 +18,7 @@
 }
 
 .navbar .logo-home {
-    width: 15vh;
+    width: 12vh;
     position: absolute;
     left: 10vh;
     bottom: 1.2vh;
@@ -44,7 +44,7 @@
     content: '/';
     position: absolute;
     left: -15px;
-    color: #00bfff;
+    color: #d82229;
 }
 
 .nav-link:first-child::before {
@@ -52,8 +52,8 @@
 }
 
 .nav-link:hover {
-    color: #0080ff;
-    text-shadow: 0 0 5px #0080ff;
+    color: #d82229;
+    text-shadow: 0 0 5px #d82229;
 }
 
 @media screen and (max-width: 768px) {
@@ -63,6 +63,7 @@
     
     .nav-link {
         margin: 0 15px;
+        font-size: 18px;
     }
 
     .menu-icon {

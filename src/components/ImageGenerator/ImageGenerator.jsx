@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./ImageGenerator.css";
 import { useNavigate } from "react-router-dom";
-import defaultImage from "./default-image.jpg";
+import defaultImage from "./default-image.png";
 
 function ImageGenerator() {
   // State for image URL, input reference, navigation hook, and loading indicator

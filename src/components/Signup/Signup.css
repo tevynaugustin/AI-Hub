@@ -8,7 +8,7 @@
   }
 
   .sign-up-header .sign-up-title {
-    color: #00bfff; 
+    color: #d82229; 
     margin-bottom: 15px; 
     margin-top: 0;
     text-align: center;
@@ -17,7 +17,7 @@
   .sign-up-container {
     width: 300px;
     padding: 20px;
-    border: 2px solid #00bfff; 
+    border: 2px solid #d82229; 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
     background-color: #333; 
@@ -49,12 +49,13 @@
   }
   
   .sign-up-container button {
-    background-color: #00bfff;
+    background-color: #d82229;
     color: #fff;
     padding: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: .3s ease-in-out;
   }
   
   .sign-up-container button:hover {
@@ -68,13 +69,15 @@
   }
   
   .sign-up-container a {
-    color: #00bfff;
+    color: #d82229;
     text-decoration: none;
     font-weight: bold;
+    transition: .3s ease-in-out;
   }
   
   .sign-up-container a:hover {
     text-decoration: underline;
+    color: #00bfff;
   }
   
   .sign-up-container .error-message {
@@ -124,8 +127,8 @@
   }
 
   #root .sign-up-body .logo {
-    width: 75vh !important;
-    top: 0;
+    max-width: 35vh !important;
+    top: 15%;
   }
 
   #root .sign-up-body .sign-up-container .sign-up-title {
@@ -196,25 +199,25 @@
     /* Small Devices, 600px and below */
     @media only screen and (max-width: 600px) {
       .sign-up-body .logo {
-        width: 75%;
+        max-width: 35vh;
         position: absolute;
         right: 0;
         left: 50%;
-        top: 5vh;
+        top: 15%;
         transform: translateX(-50%);
       }
 
       .sign-up-body .sign-up-container {
-        width: 40vh;
+        width: 60vw;
       }
     }
   
     /* Medium Devices, 768px and up */
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 601px) {
       .sign-up-body .logo {
         position: absolute;
         left: 50%;
-        top: 5vh;
+        top: 15%;
         transform: translateX(-50%);
       }
 
@@ -243,8 +246,8 @@
       .sign-up-body .logo {
         position: absolute;
         left: 50%;
-        top: 5vh;
-        width: 55vh;
+        top: 15%;
+        max-width: 35vh;
         transform: translateX(-50%);
       }
 
@@ -275,7 +278,7 @@
       .sign-up-body .logo {
         position: absolute;
         left: 50%;
-        top: 5vh;
+        top: 15%;
         transform: translateX(-50%);
       }
       .sign-up-body .sign-up-container {

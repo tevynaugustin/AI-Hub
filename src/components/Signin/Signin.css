@@ -10,7 +10,7 @@
   .sign-in-container {
     width: 300px;
     padding: 20px;
-    border: 2px solid #00bfff; /* Vibrant border color */
+    border: 2px solid #d82229; /* Vibrant border color */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger box shadow for depth */
     background-color: #333; /* Dark background color inside the container */
@@ -19,12 +19,12 @@
 
   .forgotten-password:hover {
     cursor: pointer;
-    color: #00bfff;
+    color: #d82229;
     transition: .3s ease-in-out;
   }
 
   .sign-in-header .sign-in-title {
-    color: #00bfff; 
+    color: #d82229; 
     margin-bottom: 15px; 
     margin-top: 0;
     text-align: center;
@@ -72,7 +72,7 @@
   }
   
   .sign-in-container button {
-    background-color: #00bfff;
+    background-color: #d82229;
     color: #fff;
     padding: 10px;
     border: none;
@@ -92,9 +92,10 @@
   }
   
   .sign-in-container a {
-    color: #00bfff;
+    color: #d82229;
     text-decoration: none;
     font-weight: bold;
+    transition: .3s ease-in-out;
   }
 
   .sign-in-body .sign-in-container .forgotten-password {
@@ -102,6 +103,7 @@
   }
   
   .sign-in-container a:hover {
+    color: #0080ff;
     text-decoration: underline;
   }
   
@@ -240,11 +242,11 @@
     /* Small Devices, 600px and below */
     @media only screen and (max-width: 600px) {
       .sign-in-body .logo {
-        width: 75%;
+        max-width: 35vh;
         position: absolute;
         right: 0;
         left: 50%;
-        top: 5vh;
+        top: 15%;
         transform: translateX(-50%);
       }
 
@@ -256,11 +258,11 @@
     /* Small Devices, 600px and up */
     @media only screen and (min-width: 600px) {
       .sign-in-body .logo {
-        width: 75%;
+        max-width: 35vh;
         position: absolute;
         right: 0;
         left: 50%;
-        top: 5vh;
+        top: 15%;
         transform: translateX(-50%);
       }
     }
@@ -270,7 +272,8 @@
       .sign-in-body .logo {
         position: absolute;
         left: 50%;
-        top: 5vh;
+        top: 15%;
+        max-width: 35vh;
         transform: translateX(-50%);
       }
 
@@ -299,8 +302,8 @@
       .sign-in-body .logo {
         position: absolute;
         left: 50%;
-        top: 5vh;
-        width: 55vh;
+        top: 15%;
+        max-width: 35vh;
         transform: translateX(-50%);
       }
 
@@ -330,7 +333,8 @@
       .sign-in-body .logo {
         position: absolute;
         left: 50%;
-        top: 5vh;
+        max-width: 300px;
+        top: 15%;
         transform: translateX(-50%);
       }
       .sign-in-body .sign-in-container {

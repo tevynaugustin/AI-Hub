@@ -4,7 +4,7 @@
 .my-account-container {
     width: 400px;
     padding: 40px;
-    border: 2px solid #ff7f50;
+    border: 2px solid #d82229;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     background-color: #333;
@@ -14,10 +14,18 @@
     transform: translate(-50%, -50%);
     margin: 0 auto;
   }
+
+  .my-account-logo {
+    max-width: 30vh;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+  }
   
   /* Title for the my account section */
   .my-account-container h2 {
-    color: #ff7f50;
+    color: #d82229;
     margin-bottom: 15px;
     margin-top: 0;
     text-align: center;
@@ -49,7 +57,7 @@
   
   /* Button styles for the my account form */
   .my-account-container button {
-    background-color: #ff7f50;
+    background-color: #d82229;
     color: #fff;
     padding: 10px;
     border: none;
@@ -68,7 +76,11 @@
   
   /* Hover styles for the my account form button */
   .my-account-container button:hover {
-    background-color: #ff6347;
+    background-color: #a81f24;
+  }
+
+  .my-account-container .back-button:hover {
+    background-color: #a81f24 !important;
   }
   
   /* Paragraph styles for messages in the my account form */
@@ -80,7 +92,7 @@
   
   /* Anchor (link) styles for the my account form */
   .my-account-container a {
-    color: #ff7f50;
+    color: #d82229;
     text-decoration: none;
     font-weight: bold;
   }
@@ -194,8 +206,9 @@
     .my-account-logo {
       position: absolute;
       left: 50%;
+      top: 8%;
       transform: translateX(-50%);
-      width: 45vh;
+      max-width: 25vh;
     }
 
     .my-account-container {
@@ -219,7 +232,7 @@
       width: 20vh;
     }
     .my-account-container .back-button {
-      background-color: #00bfff !important;
+      background-color: #d82229 !important;
     }
   }
 
@@ -229,7 +242,6 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      width: 55vh;
     }
 
     .my-account-container {
@@ -246,10 +258,11 @@
     }
 
     .my-account-logo {
-      width: 65vh;
+      max-width: 30vh;
       position: absolute;
-      left: 0%;
-      transform: translateX(0%);
+      left: 50%;
+      transform: translateX(-50%);
+      top: 10%;
     }
   }
   /* ---------------------------------------------------------------------------------------------- */
@@ -262,20 +275,22 @@
     }
 
     .my-account-logo {
-      width: 65vh;
+      max-width: 30vh;
       position: absolute;
-      transform: translateX(0%);
-      left: 0%;
+      transform: translateX(-50%);
+      left: 50%;
+      top: 10%;
     }
   }
 
   /* Large Devices, 1200px and up */
   @media only screen and (min-width: 1200px) {
     .my-account-logo {
-      width: 65vh;
+      max-width: 30vh;
       position: absolute;
-      left: 0%;
-      transform: translateX(0%);
+      left: 50%;
+      top: 10%;
+      transform: translateX(-50%);
     }
 
     .my-account-container {
