@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./imageanalyzer.css";
 import { useNavigate } from "react-router-dom";
+import Footer from '../footer/footer';
 
 const ImageAnalyzer = () => {
   const [image, setImage] = useState(null);
@@ -163,6 +164,7 @@ const ImageAnalyzer = () => {
           <p className="data-response">{content}</p>
         </div>
       )}
+    <Footer/>
     </div>
   );
 };

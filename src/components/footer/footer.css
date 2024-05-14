@@ -1,0 +1,12 @@
+.footer {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    top: 92vh;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.9em;
+    color: #929292; /* You can adjust this color as needed */
+  }
+  

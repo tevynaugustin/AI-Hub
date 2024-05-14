@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import "./ImageGenerator.css";
 import { useNavigate } from "react-router-dom";
 import defaultImage from "./default-image.png";
+import Footer from '../footer/footer'
 
 function ImageGenerator() {
   // State for image URL, input reference, navigation hook, and loading indicator
@@ -97,6 +98,7 @@ function ImageGenerator() {
       </div>
       {/* Button to go back to Home page */}
       <button className="back-button" onClick={() => backToHome()}>Go back to Home Page</button>
+      <Footer/>
     </div>
   );
 }

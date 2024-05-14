@@ -11,6 +11,7 @@ import {
   deleteUser
 } from "firebase/auth";
 import logo from '../../main images/logo.png';
+import Footer from '../footer/footer';
 
 
 function Myaccount() {
@@ -222,6 +223,7 @@ function Myaccount() {
       {/* Button for user deletion */}
       <button className="delete-user" onClick={userDeletion}>Delete User</button>
     </div>
+    <Footer/>
     </>
   );
 }

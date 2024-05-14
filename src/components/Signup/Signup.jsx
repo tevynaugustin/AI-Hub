@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from '../footer/footer'
 import "./Signup.css";
 import "../../firebase";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -119,6 +120,7 @@ function Signup() {
           {loading && <p className="loading"></p>}
         </form>
       </div>
+      <Footer/>
     </div>
   );
 }

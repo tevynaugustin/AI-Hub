@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from '../footer/footer'
 import "./Signin.css";
 import '../../firebase'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
@@ -101,6 +102,7 @@ function Signin() {
           {loading && <p className="loading"></p>}
         </form>
       </div>
+      <Footer/>
     </div>
   );
 }

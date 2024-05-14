@@ -1,4 +1,5 @@
 // Imports
+import Footer from '../footer/footer'
 import React from "react";
 import { getAuth, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
@@ -129,6 +130,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

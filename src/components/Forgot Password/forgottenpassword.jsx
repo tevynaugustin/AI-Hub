@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import './forgottenpassword.css'
+import Footer from '../footer/footer'
 import logo from '../../main images/logo.png'
 
 function ForgotPassword() {
@@ -60,6 +61,7 @@ function ForgotPassword() {
           <p className="accidentally-clicked">Accidentally Clicked? <br/> <span className="acc-clicked-span" onClick={accidentallyClicked}>Click here to go back to the Login page.</span></p>
         </form>
       </div>
+      <Footer/>
     </>
   );
 }
