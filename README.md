@@ -48,24 +48,29 @@ Once the application is up and running, navigate to `http://localhost:3000` in y
 
 Here are some screenshots of the application:
 
+### Sign Up Page
+![Sign Up Page](https://github.com/tevynaugustin/AI-Hub/assets/94698766/a637c4f1-edaa-4879-9ee3-9e23cf71f217)
+
+
 ### Login Page
 ![Login Page](https://github.com/tevynaugustin/AI-Hub/assets/94698766/4309c177-48be-4bf1-9642-fb48c1109fdc)
 
 ### Home Page
-![Home Page](link-to-screenshot)
+![Home Page](https://github.com/tevynaugustin/AI-Hub/assets/94698766/a4e8d076-e409-433e-a20a-679933c5b161)
 
-### Sign In Page
-![Sign In Page](link-to-screenshot)
+### Image Generator Page
+![Image Generator Page](https://github.com/tevynaugustin/AI-Hub/assets/94698766/67ffb0d1-8c95-4013-8ce7-2bb1f6ff6e28)
 
-### Dashboard
-![Dashboard](link-to-screenshot)
 
-### AI Tool Page
-![AI Tool Page](link-to-screenshot)
+### Image Analyzer Page
+![Image Analyzer Page](https://github.com/tevynaugustin/AI-Hub/assets/94698766/dcc4a2ac-00bb-4b62-8c26-ee4c50498430)
+
+
 
 ## Features
 
 - User authentication (sign in/up)
+- Updating account details w/ authentication
 - Access to multiple AI tools
 - User-friendly dashboard
 - Real-time data processing
@@ -73,12 +78,11 @@ Here are some screenshots of the application:
 
 ## Technologies Used
 
-- **Frontend**: React, Redux
+- **Frontend**: ReactJS, CSS
 - **Backend**: Node.js, Express
-- **Database**: MongoDB
+- **Database**: Railway
 - **Authentication**: Firebase
-- **Hosting**: Vercel/Heroku
-- **Other**: TensorFlow.js, D3.js
+- **Hosting**: Hostinger
 
 ## Contributing
 
@@ -96,6 +100,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [your-email@example.com](mailto:your-email@example.com)
+Your Name - [tevynaugustin@gmail.com](mailto:tevynaugustin@gmail.com)
 
-Project Link: [https://github.com/your-username/AI-HUB](https://github.com/your-username/AI-HUB)
+Project Link: [https://opticaihub.co.uk/]
