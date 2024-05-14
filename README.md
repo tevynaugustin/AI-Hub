@@ -49,7 +49,7 @@ Once the application is up and running, navigate to `http://localhost:3000` in y
 Here are some screenshots of the application:
 
 ### Login Page
-![Login Page](![image](https://github.com/tevynaugustin/AI-Hub/assets/94698766/4309c177-48be-4bf1-9642-fb48c1109fdc))
+![Login Page](https://github.com/tevynaugustin/AI-Hub/assets/94698766/4309c177-48be-4bf1-9642-fb48c1109fdc)
 
 ### Home Page
 ![Home Page](link-to-screenshot)
