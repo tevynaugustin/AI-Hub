@@ -1,4 +1,4 @@
-AI-HUB Project
+<h1>AI-HUB Project<h1>
 Description
 AI-HUB is a comprehensive platform designed to provide users with access to various AI-powered tools and resources. Our goal is to make artificial intelligence accessible and useful for everyone, whether you are a beginner or an advanced user.
 
