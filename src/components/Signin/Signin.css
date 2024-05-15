@@ -6,6 +6,11 @@
     margin: 0;
     background-color: #1f1f1f; /* Dark background color */
   }
+
+  .sign-in-body .logo {
+    position: static !important;
+    margin-right: 20px;
+  }
   
   .sign-in-container {
     width: 300px;
@@ -242,39 +247,27 @@
     /* Small Devices, 600px and below */
     @media only screen and (max-width: 600px) {
       .sign-in-body .logo {
-        max-width: 35vh;
-        position: absolute;
-        right: 0;
-        left: 50%;
-        top: 15%;
-        transform: translateX(-50%);
+        max-width: 20vh;
+        margin-left: 20px;
       }
 
       .sign-in-body .sign-in-container {
         width: 40vh;
+        margin-right: 20px;
       }
     }
   
     /* Small Devices, 600px and up */
     @media only screen and (min-width: 600px) {
       .sign-in-body .logo {
-        max-width: 35vh;
-        position: absolute;
-        right: 0;
-        left: 50%;
-        top: 15%;
-        transform: translateX(-50%);
+        max-width: 30vh;
       }
     }
   
     /* Medium Devices, 768px and up */
     @media screen and (min-width: 768px) {
       .sign-in-body .logo {
-        position: absolute;
-        left: 50%;
-        top: 15%;
         max-width: 35vh;
-        transform: translateX(-50%);
       }
 
       .sign-in-body .sign-in-container {
@@ -300,11 +293,7 @@
     /* Large Devices, 992px and up */
     @media only screen and (min-width: 992px) {
       .sign-in-body .logo {
-        position: absolute;
-        left: 50%;
-        top: 15%;
         max-width: 35vh;
-        transform: translateX(-50%);
       }
 
       .sign-in-body .sign-in-container .sign-in-title {
@@ -331,11 +320,7 @@
     /* Large Devices, 1200px and up */
     @media only screen and (min-width: 1200px) {
       .sign-in-body .logo {
-        position: absolute;
-        left: 50%;
         max-width: 300px;
-        top: 15%;
-        transform: translateX(-50%);
       }
       .sign-in-body .sign-in-container {
         width: 300px;

@@ -4,7 +4,8 @@
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
     background-color: #222;
     padding: 15px;
     z-index: 999;
@@ -15,6 +16,7 @@
     left: 5vh;
     bottom: 1.2vh;
     width: max-content;
+    margin-right: 15px;
 }
 
 .navbar .logo-home {
@@ -22,12 +24,6 @@
     position: absolute;
     left: 10vh;
     bottom: 1.2vh;
-}
-
-.navbar-container {
-    display: flex;
-    align-items: center;
-    order: -1;
 }
 
 .nav-link {

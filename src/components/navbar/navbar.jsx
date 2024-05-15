@@ -15,31 +15,27 @@ function Navbar() {
     setDropdownOpen(!isDropdownOpen);
   };
 
-  // JSX for the Navbar
   return (
     <div>
       <nav className="navbar">
+        <div className="left-container">
 
-        {/* Hamburger menu icon */}
-        <div className="menu-icon" onClick={toggleDropdown}>
-          <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
+          <div className="menu-icon" onClick={toggleDropdown}>
+            <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
 
-            {/* Dropdown content */}
-            <div className="dropdown-content">
-              <NavLink to="/myaccount" className="nav-link">
-                My Account
-              </NavLink>
+              <div className="dropdown-content">
+                <NavLink to="/myaccount" className="nav-link">
+                  My Account
+                </NavLink>
+              </div>
             </div>
+
+            <FontAwesomeIcon icon={faBars} />
           </div>
 
-          {/* Hamburger icon */}
-          <FontAwesomeIcon icon={faBars} />
+          <img className="logo-home" src={logo} alt="Logo" />
         </div>
 
-        {/* Logo */}
-        <img className="logo-home" src={logo} alt="" />
-
-        {/* Navigation links */}
         <div className="navbar-container">
           <NavLink to="/imagegenerator" className="nav-link">
             Image Generator

@@ -7,6 +7,11 @@
     background-color: #1f1f1f; 
   }
 
+  .sign-up-body .logo {
+    position: static !important;
+    margin-right: 20px;
+  }
+
   .sign-up-header .sign-up-title {
     color: #d82229; 
     margin-bottom: 15px; 
@@ -199,30 +204,25 @@
     /* Small Devices, 600px and below */
     @media only screen and (max-width: 600px) {
       .sign-up-body .logo {
-        max-width: 35vh;
-        position: absolute;
-        right: 0;
-        left: 50%;
-        top: 15%;
-        transform: translateX(-50%);
+        max-width: 20vh;
+        margin-left: 20px;
       }
 
       .sign-up-body .sign-up-container {
         width: 60vw;
+        margin-right: 20px;
       }
     }
   
     /* Medium Devices, 768px and up */
     @media screen and (min-width: 601px) {
       .sign-up-body .logo {
-        position: absolute;
-        left: 50%;
-        top: 15%;
-        transform: translateX(-50%);
+        margin-left: 20px;
       }
 
       .sign-up-body .sign-up-container {
         width: 40vh;
+        margin-right: 20px;
       }
 
       .sign-up-body .sign-up-container p,
@@ -244,11 +244,7 @@
     /* Large Devices, 992px and up */
     @media only screen and (min-width: 992px) {
       .sign-up-body .logo {
-        position: absolute;
-        left: 50%;
-        top: 15%;
         max-width: 35vh;
-        transform: translateX(-50%);
       }
 
       .sign-up-body .sign-up-container .sign-in-title {
@@ -276,10 +272,7 @@
     /* Large Devices, 1200px and up */
     @media only screen and (min-width: 1200px) {
       .sign-up-body .logo {
-        position: absolute;
-        left: 50%;
-        top: 15%;
-        transform: translateX(-50%);
+
       }
       .sign-up-body .sign-up-container {
         width: 300px;
