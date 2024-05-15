@@ -49,8 +49,7 @@ Once the application is up and running, navigate to `http://localhost:3000` in y
 Here are some screenshots of the application:
 
 ### Sign Up Page
-![Sign Up Page](https://github.com/tevynaugustin/AI-Hub/assets/94698766/8900d721-5063-4814-b14f-b4652625ef09)
-
+![Sign Up Page](https://github.com/tevynaugustin/AI-Hub/assets/94698766/91dc9df5-4cb1-483c-a7e7-e29025dd2e3c)
 
 
 ### Login Page
