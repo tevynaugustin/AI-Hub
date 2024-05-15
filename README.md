@@ -49,11 +49,13 @@ Once the application is up and running, navigate to `http://localhost:3000` in y
 Here are some screenshots of the application:
 
 ### Sign Up Page
-![Sign Up Page](https://github.com/tevynaugustin/AI-Hub/assets/94698766/a637c4f1-edaa-4879-9ee3-9e23cf71f217)
+![Sign Up Page](https://github.com/tevynaugustin/AI-Hub/assets/94698766/8900d721-5063-4814-b14f-b4652625ef09)
+
 
 
 ### Login Page
-![Login Page](https://github.com/tevynaugustin/AI-Hub/assets/94698766/4309c177-48be-4bf1-9642-fb48c1109fdc)
+![Login Page](https://github.com/tevynaugustin/AI-Hub/assets/94698766/cb0ea332-e54a-4ed9-a741-9e22e900ea72)
+
 
 ### Home Page
 ![Home Page](https://github.com/tevynaugustin/AI-Hub/assets/94698766/a4e8d076-e409-433e-a20a-679933c5b161)
